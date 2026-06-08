@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript applications</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script>
+        // check language before render to avoid layout flash
+        (function () {
+            var lang = localStorage.getItem('app-lang');
+            if (lang === 'en') {
+                document.documentElement.lang = 'en';
+                document.documentElement.dir  = 'ltr';
+            }
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- ── Header ──────────────────────────────────────────────── -->
+    <header>
+        <a href="/"><h1 data-i18n="app.title">تطبيقات الجافاسكريبت</h1></a>
+        <div class="header-controls">
+            <button class="lang-toggle" data-i18n-aria="aria.language" aria-label="تبديل اللغة">
+                <span data-i18n="lang.toggleLabel">EN</span>
+            </button>
+            <button class="menu-btn" data-i18n-aria="aria.menu" aria-label="القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ── Sidebar nav (filled at runtime by main.js → NavLink) ─── -->
+    <nav id="sidebar">
+        <ul></ul>
+    </nav>
+
+    <!-- ── Main ─────────────────────────────────────────────────── -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+
+                <!-- Welcome card -->
+                <div class="hero-card">
+                    <h2 data-i18n="hero.welcome">مرحباً بك في منصة تطبيقات الجافاسكريبت</h2>
+                </div>
+
+                <!-- Featured tasks section (filled at runtime by main.js → TaskCard) -->
+                <div class="featured-tasks">
+                    <div class="featured-boxes"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Dynamic task content injected here by the router -->
+        <div id="task-content">
+
+            <!-- Here we need to inject the task content which will be in a separate file like task1.html, task2.html, etc -->
+        </div>
+    </main>
+
+    <!-- ── Router + interaction scripts ──────────────────────── -->
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

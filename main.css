@@ -1,0 +1,335 @@
+/* ── Reset ──────────────────────────────────────────────── */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f2f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a5533a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c76b4f;
+}
+
+/* ── Main root colors ─── */
+:root {
+    --primary: #c76b4f;
+    --primary-dark: #a5533a;
+    --bg: #fbf6f3;
+    --card-bg: #ffffff;
+    --result-bg: #f7e9e3;
+    --border: #edd2c9;
+    --text-main: #2a1c18;
+    --text-label: #6a4b42;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --radius-card: 10px;
+    --radius-input: 6px;
+    --sidebar-w: 260px;
+}
+
+/* ── Body ───────────────────────────────────────────────── */
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+    padding: 0 24px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    padding: 1%;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-input);}
+
+header a:hover{
+    background-color: var(--result-bg);
+}
+
+header h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary);
+    letter-spacing: 0.3px;
+}
+
+.header-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Icon buttons  */
+.menu-btn,
+.lang-toggle {
+    background: var(--result-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-input);
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn:hover,
+.lang-toggle:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+/* ── Sidebar nav ─────────────────────────────────────────── */
+nav {
+    position: fixed;
+    top: 60px;
+    height: calc(100% - 60px);
+    width: var(--sidebar-w);
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease;
+    z-index: 999;
+    overflow-y: auto;
+    padding: 16px 0;
+}
+
+/* RTL  */
+html[dir="rtl"] nav {
+    right: 0;
+    transform: translateX(100%);
+}
+
+/* LTR  */
+html[dir="ltr"] nav {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+/* Visible state  */
+html[dir="rtl"] nav.visible,
+html[dir="ltr"] nav.visible {
+    transform: translateX(0);
+}
+
+/* Freeze all transitions during a language flip to avoid the sidebar
+   visibly sliding across the screen when the directional rules swap. */
+html.lang-switching *,
+html.lang-switching *::before,
+html.lang-switching *::after {
+    transition: none !important;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0 12px;
+}
+
+nav ul li {
+    margin-bottom: 4px;
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    color: var(--text-label);
+    text-decoration: none;
+    border-radius: var(--radius-input);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: var(--result-bg);
+    color: var(--primary);
+}
+
+nav ul li a.active {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+nav ul li a i {
+    font-size: 13px;
+}
+
+/* ── Main ────────────────────────────────────────────────── */
+main {
+    flex: 1;
+    margin-top: 60px;
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+.hero {
+    background-color: var(--bg);
+    padding: 48px 16px 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Top card  */
+.hero-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow);
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.hero-card h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+/* ── Featured tasks grid ─────────────────────────────────── */
+.featured-tasks {
+    margin-top: 0;
+}
+
+.featured-tasks h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 16px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+}
+
+.featured-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+/* Task card */
+.task-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    border: 1px solid var(--border);
+}
+
+.task-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 6px 18px rgba(74, 144, 226, 0.15);
+}
+
+.task-card i {
+    font-size: 28px;
+    color: var(--primary);
+}
+
+.task-card h4 {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.task-card p {
+    font-size: 13px;
+    color: var(--text-label);
+    line-height: 1.5;
+    flex: 1;
+}
+
+/* Task link  */
+.task-link {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-input);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.task-link:hover {
+    background-color: var(--primary-dark);
+}
+
+
+/* ── Task content area ───────────────────────────────────── */
+#task-content {
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    display: none;
+    padding: 0;
+    overflow-y: auto;
+}
+
+#task-content.show {
+    display: block;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .featured-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        padding: 28px 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    nav {
+        width: 100%;
+    }
+}
+
