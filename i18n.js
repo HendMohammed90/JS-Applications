@@ -1,8 +1,8 @@
 // ── Tiny i18n module ──────────────────────────────────────────
 
-const STORAGE_KEY  = 'app-lang';
+const STORAGE_KEY = 'app-lang';
 const DEFAULT_LANG = 'ar';
-const SUPPORTED    = ['ar', 'en'];
+const SUPPORTED = ['ar', 'en'];
 
 // Arabic-Indic digit glyphs, indexed 0..9
 const AR_DIGITS = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
@@ -10,84 +10,98 @@ const AR_DIGITS = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
 // ── Dictionaries ───────────────────────────────────────────────
 const dict = {
     ar: {
-        'app.title':        'تطبيقات الجافاسكريبت',
-        'aria.menu':        'القائمة',
-        'aria.language':    'تبديل اللغة',
+        'app.title': 'تطبيقات الجافاسكريبت',
+        'aria.menu': 'القائمة',
+        'aria.language': 'تبديل اللغة',
         'lang.toggleLabel': 'EN',
 
-        'hero.welcome':     'مرحباً بك في منصة تطبيقات الجافاسكريبت',
+        'hero.welcome': 'مرحباً بك في منصة تطبيقات الجافاسكريبت',
 
+        //task 1
         'card.task1.title': 'آلة حاسبة تفاعلية',
-        'card.task1.desc':  'آلة حاسبة متطورة تدعم العمليات الحسابية الأساسية',
-        'card.viewApp':     'عرض التطبيق',
+        'card.task1.desc': 'آلة حاسبة متطورة تدعم العمليات الحسابية الأساسية',
 
-        'nav.taskPrefix':   'تطبيق',
+        //task 2
+        'card.task2.title': 'مخطط ايام الاسبوع',
+        'card.task2.desc': 'ما هو يومك المفضل وسنخبرك برساله مميزة',
+
+        'card.viewApp': 'عرض التطبيق',
+
+        'nav.taskPrefix': 'تطبيق',
 
         // Shared stub-page strings
-        'stub.comingSoon':  'قريباً',
+        'stub.comingSoon': 'قريباً',
         'stub.description': 'هذه المهمة مسجلة في الراوتر وجاهزة للتنفيذ.',
-        'stub.taskLabel':   'مهمة',
+        'stub.taskLabel': 'مهمة',
 
         // task1 (calculator) strings
-        'task1.title':      'نموذج الآلة الحاسبة',
-        'task1.firstNum':   'الرقم الأول',
-        'task1.secondNum':  'الرقم الثاني',
-        'task1.add':        '➕ جمع',
-        'task1.subtract':   '➖ طرح',
-        'task1.multiply':   '✖ ضرب',
-        'task1.divide':     '➗ قسمة',
-        'task1.result':     'النتيجة:',
+        'task1.title': 'نموذج الآلة الحاسبة',
+        'task1.firstNum': 'الرقم الأول',
+        'task1.secondNum': 'الرقم الثاني',
+        'task1.add': '➕ جمع',
+        'task1.subtract': '➖ طرح',
+        'task1.multiply': '✖ ضرب',
+        'task1.divide': '➗ قسمة',
+        'task1.result': 'النتيجة:',
         'task1.errInvalid': 'الرجاء إدخال أرقام صحيحة في الحقلين.',
         'task1.errDivZero': 'لا يمكن القسمة على صفر.',
 
         // task2 (favorite day) strings
-        'task2.title':       'ما هو يومك المفضل؟',
+        'task2.title': 'ما هو يومك المفضل؟',
         'task2.placeholder': 'اكتب هنا يومك المفضل',
-        'task2.btn':         '✓ تحقق',
-        'task2.errMixed':    'لقد كتبت بالغتين العربية و الانجليزية اختر واحده',
-        'task2.errInvalid':  'غير مسموح بالارقام او الرموز او المسافات من فضلك اختر يوم',
-        'task2.errEmpty':    'من فضلك اكتب يوماً.',
-        'task2.unknown':     'يبدو أنك اخترت:',
+        'task2.btn': '✓ تحقق',
+        'task2.errMixed': 'لقد كتبت بالغتين العربية و الانجليزية اختر واحده',
+        'task2.errInvalid': 'غير مسموح بالارقام او الرموز او المسافات من فضلك اختر يوم',
+        'task2.errEmpty': 'من فضلك اكتب يوماً.',
+        'task2.unknown': 'يبدو أنك اخترت:',
+        'task2.errWrongScript': 'الرجاء الكتابة بالعربية',
     },
     en: {
-        'app.title':        'JavaScript Applications',
-        'aria.menu':        'Menu',
-        'aria.language':    'Toggle language',
+        'app.title': 'JavaScript Applications',
+        'aria.menu': 'Menu',
+        'aria.language': 'Toggle language',
         'lang.toggleLabel': 'ع',
 
-        'hero.welcome':     'Welcome to simple JS Applications Platform',
+        'hero.welcome': 'Welcome to simple JS Applications Platform',
 
+        //task 1
         'card.task1.title': 'Interactive Calculator',
-        'card.task1.desc':  'A modern calculator supporting basic arithmetic operations.',
-        'card.viewApp':     'View App',
+        'card.task1.desc': 'A modern calculator supporting basic arithmetic operations.',
 
-        'nav.taskPrefix':   'Task',
+        //task 2
+        'card.task2.title': 'Weekly Planner',
+        'card.task2.desc': "What's your favorite day and we'll tell you in a special message",
+
+        'card.viewApp': 'View App',
+
+        'nav.taskPrefix': 'Task',
 
         // Shared stub-page strings
-        'stub.comingSoon':  'Coming Soon',
+        'stub.comingSoon': 'Coming Soon',
         'stub.description': 'This task is registered in the router and ready to be implemented.',
-        'stub.taskLabel':   'Task',
+        'stub.taskLabel': 'Task',
 
         // task1 (calculator) strings
-        'task1.title':      'Calculator Form',
-        'task1.firstNum':   'First Number',
-        'task1.secondNum':  'Second Number',
-        'task1.add':        '➕ Add',
-        'task1.subtract':   '➖ Subtract',
-        'task1.multiply':   '✖ Multiply',
-        'task1.divide':     '➗ Divide',
-        'task1.result':     'Result:',
+        'task1.title': 'Calculator Form',
+        'task1.firstNum': 'First Number',
+        'task1.secondNum': 'Second Number',
+        'task1.add': '➕ Add',
+        'task1.subtract': '➖ Subtract',
+        'task1.multiply': '✖ Multiply',
+        'task1.divide': '➗ Divide',
+        'task1.result': 'Result:',
         'task1.errInvalid': 'Please enter valid numbers in both fields.',
         'task1.errDivZero': 'Cannot divide by zero.',
 
         // task2 (favorite day) strings
-        'task2.title':       'What is your Favorite Day?',
+        'task2.title': 'What is your Favorite Day?',
         'task2.placeholder': 'Write your favorite day here',
-        'task2.btn':         '✓ Check',
-        'task2.errMixed':    'You typed in both Arabic and English, please choose one',
-        'task2.errInvalid':  'Numbers, symbols and spaces are not allowed, please enter a day',
-        'task2.errEmpty':    'Please write a day.',
-        'task2.unknown':     'It seems you chose:',
+        'task2.btn': '✓ Check',
+        'task2.errMixed': 'You typed in both Arabic and English, please choose one',
+        'task2.errInvalid': 'Numbers, symbols and spaces are not allowed, please enter a day',
+        'task2.errEmpty': 'Please write a day.',
+        'task2.unknown': 'It seems you chose:',
+        'task2.errWrongScript': 'Please type in English',
     },
 };
 
@@ -158,7 +172,7 @@ export function applyShellTranslations() {
 
 function applyDocumentDirection() {
     document.documentElement.lang = currentLang;
-    document.documentElement.dir  = currentLang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 }
 
 export function initI18n() {

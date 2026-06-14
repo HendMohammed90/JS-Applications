@@ -4,17 +4,18 @@ import { NavLink } from './components/NavLink.js';
 import { TaskCard } from './components/TaskCard.js';
 
 // ── DOM refs ───────────────────────────────────────────────────
-const sidebar     = document.getElementById('sidebar');
+const sidebar = document.getElementById('sidebar');
 const sidebarList = sidebar.querySelector('ul');
-const featured    = document.querySelector('.featured-boxes');
-const menuBtn     = document.querySelector('.menu-btn');
-const langToggle  = document.querySelector('.lang-toggle');
+const featured = document.querySelector('.featured-boxes');
+const menuBtn = document.querySelector('.menu-btn');
+const langToggle = document.querySelector('.lang-toggle');
 
 // ── Data ──────────────────────────────────────────────────────
 const TOTAL_TASKS = 22;
 
 const featuredCards = [
     { taskId: 'task1', icon: 'fa-calculator', titleKey: 'card.task1.title', descKey: 'card.task1.desc' },
+    { taskId: 'task2', icon: 'fa-calculator', titleKey: 'card.task2.title', descKey: 'card.task2.desc' },
 ];
 
 // ── Render shell components ───────────────────────────────────

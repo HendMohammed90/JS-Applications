@@ -32,7 +32,7 @@ export const styles = `
 .day-input {
   width: 100%;
   max-width: 800px;
-  height: 90px;
+  height: 70px;
   border: 4px solid rgba(255,255,255,0.15);
   border-radius: 18px;
   background: #f7e9e3;
@@ -50,7 +50,7 @@ export const styles = `
 }
 
 .check-btn {
-  margin-top: 30px;
+  margin-top: 20px;
   border: none;
   cursor: pointer;
   border-radius: 20px;
@@ -67,23 +67,22 @@ export const styles = `
 }
 
 .result {
-  margin-top: 40px;
-  min-height: 110px;
+  margin-top: 20px;
+  min-height: 50px;
   border-radius: 20px;
   background: #f7e9e3;
   color: #a5533a;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 42px;
+  font-size: 25px;
   font-weight: 700;
-  padding: 20px;
+  padding: 10px;
 }
 
 .message{
- display: none;
- margin-top: 40px;
-  min-height: 110px;
+  margin-top: 25px;
+  min-height: 50px;
   border-radius: 20px;
   background: #f7e9e3;
   color: #a5533a;
@@ -91,8 +90,8 @@ export const styles = `
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  font-weight: 700;
-  padding: 5px;
+  font-weight: 200;
+  padding: 10px;
 
 }
 `;
@@ -126,6 +125,10 @@ export function init() {
   const input = document.getElementById("favorite-day");
   const result = document.getElementById("result");
   const message = document.getElementById("message");
+
+  const uiLang = document.documentElement.lang;
+  input.dir = uiLang === 'ar' ? 'rtl' : 'ltr';
+  input.style.textAlign = uiLang === 'ar' ? 'right' : 'left';
 
   const messages = {
     "السبت": "السبت بداية أسبوع جديدة!",
@@ -189,27 +192,18 @@ export function init() {
     const hasArabic = /[\u0600-\u06FF]/.test(currentInputValue);
     const hasEnglish = /[a-zA-Z]/.test(currentInputValue);
 
-    if (hasArabic && !hasEnglish) {
-      // console.log("Language: Pure Arabic");
-      // textInput.style.direction = 'rtl';
-      //TODO1:  using normalize function and check for the input day massage
-      const res = normalizeArabic(currentInputValue)
-      // console.log(`currentInputValue after fixing ${res}`)
-      //TODO 1-1:retrieve the message
-      handleClick(res);
-
-    } else if (hasEnglish && !hasArabic) {
-      // console.log("Language: Pure English");
-      // textInput.style.direction = 'ltr';
-      //TODO2: check for the input day massage with english
-      const res = normalizeEnglishDay(currentInputValue);
-      // console.log(`currentInputValue after fixing ${res}`)
-      //TODO 2-1:retrieve the message
-      handleClick(res);
-
-    } else if (hasArabic && hasEnglish) {
+    if (hasArabic && hasEnglish) {
       message.textContent = t('task2.errMixed');
-      // console.log("Language: Mixed (Both Arabic and English)");
+    } else if (hasArabic && uiLang === 'en') {
+      message.textContent = t('task2.errWrongScript');
+    } else if (hasEnglish && uiLang === 'ar') {
+      message.textContent = t('task2.errWrongScript');
+    } else if (hasArabic) {
+      const res = normalizeArabic(currentInputValue);
+      handleClick(res);
+    } else if (hasEnglish) {
+      const res = normalizeEnglishDay(currentInputValue);
+      handleClick(res);
     } else {
       message.textContent = t('task2.errInvalid');
     }
