@@ -1,6 +1,7 @@
 // here we have a trick on the input text we need to check on it if numbers
 // legal arabic, then normalize it, then check for corresponding message
 //  legal english, then extract its message
+import { t } from '../i18n.js';
 
 export const styles = `
 .container {
@@ -100,19 +101,19 @@ export function render() {
   return `
     <div class="container">
     <div class="day-checker">
-      <h1>ما هو يومك المفضل؟</h1>
+      <h1>${t('task2.title')}</h1>
 
       <input
         id="favorite-day"
         class="day-input"
         type="text"
-        placeholder="اكتب هنا يومك المفضل "
+        placeholder="${t('task2.placeholder')}"
       />
 
       <br />
 
       <button id="check-btn" class="check-btn">
-        ✓ تحقق
+        ${t('task2.btn')}
       </button>
       <div id="message" class="message"></div>
       <div id="result" class="result"></div>
@@ -123,7 +124,6 @@ export function render() {
 
 export function init() {
   const input = document.getElementById("favorite-day");
-  const button = document.getElementById("check-btn");
   const result = document.getElementById("result");
   const message = document.getElementById("message");
 
@@ -157,10 +157,10 @@ export function init() {
       .replace(/\u0640/g, "")
 
       // 3. Unify Alef variants (أ , إ , آ) to a plain Alef (ا)
-      .replace(/[\u0623\u0625\u0622]/g, "\u0627") ///this case is not working[آ]
+      .replace(/[\u0623\u0625\u0622]/g, "\u0627")
 
       // 4. Unify Taa Marbuta (ة) to Haa (ه)
-      .replace(/ة/g, "ه")//this check is not working
+      .replace(/ة/g, "ه")
 
       // 5. Unify Alef Maksura (ى) to Yeh (ي)
       .replace(/ى/g, "ي");
@@ -168,7 +168,6 @@ export function init() {
 
   function normalizeEnglishDay(text) {
     if (!text) return "";
-
     // 1. Clean the text (lowercase, remove spaces and trailing periods)
     const cleanStr = text.trim().toLowerCase().replace(/\./g, "");
     // console.log("cleanStr:", JSON.stringify(cleanStr));
@@ -176,22 +175,20 @@ export function init() {
   }
 
 
-  //replace any digits (0-9) or (١-٩) with an empty string
-  input.addEventListener('input', (event) => {
-    // event.target.value = event.target.value.replace(/[\d\u0660-\u0669]/g, '');
-    event.target.value = event.target.value.replace(/[\d\u0660-\u0669\-=\/'\[\],.؛،;]/g, '');
-  });
+  // handel input click
+  const handleInputValidation = (e) => {
 
-  input.addEventListener("input", (e) => {
-    //check on the userInput to prevent wrong typing and show a little error message if so
-    // get value of the input field
-    const currentInputValue = e.target.value;
+    // get value of the input field and replace any digits (0-9) or (١-٩) with an empty string
+    const currentInputValue = e.target.value.replace(/[\d\u0660-\u0669\-=\/'\[\],.؛،;]/g, '');;
     // console.log(`currentInputValue before fixing ${currentInputValue}`)
+
     // clear previous error messages
     message.textContent = "";
+
     // check on the val language detection
     const hasArabic = /[\u0600-\u06FF]/.test(currentInputValue);
     const hasEnglish = /[a-zA-Z]/.test(currentInputValue);
+
     if (hasArabic && !hasEnglish) {
       // console.log("Language: Pure Arabic");
       // textInput.style.direction = 'rtl';
@@ -211,27 +208,28 @@ export function init() {
       handleClick(res);
 
     } else if (hasArabic && hasEnglish) {
-      message.textContent = "لقد كتبت بالغتين العربية و الانجليزية اختر واحده ";
+      message.textContent = t('task2.errMixed');
       // console.log("Language: Mixed (Both Arabic and English)");
     } else {
-      message.textContent = "غير مسموح بالارقام او الرموز من فضلك اختر يوم ";
-      // console.log("numbers is not working");
+      message.textContent = t('task2.errInvalid');
     }
-  });
+  };
 
 
   const handleClick = (currentDataVal) => {
 
     if (!currentDataVal) {
-      result.textContent = "من فضلك اكتب يوماً.";
+      result.textContent = t('task2.errEmpty');
       return;
     }
 
     // exact lookup or return user data
-    result.textContent = messages[key] || `يبدو أنك اخترت: ${currentDataVal}`;
+    result.textContent = messages[currentDataVal] || `${t('task2.unknown')} ${currentDataVal}`;
   };
 
+  input.addEventListener('input', handleInputValidation);
+
   return () => {
-    button.removeEventListener("click", handleClick);
+    input.removeEventListener("input", handleInputValidation);
   };
 }

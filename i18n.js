@@ -39,6 +39,15 @@ const dict = {
         'task1.result':     'النتيجة:',
         'task1.errInvalid': 'الرجاء إدخال أرقام صحيحة في الحقلين.',
         'task1.errDivZero': 'لا يمكن القسمة على صفر.',
+
+        // task2 (favorite day) strings
+        'task2.title':       'ما هو يومك المفضل؟',
+        'task2.placeholder': 'اكتب هنا يومك المفضل',
+        'task2.btn':         '✓ تحقق',
+        'task2.errMixed':    'لقد كتبت بالغتين العربية و الانجليزية اختر واحده',
+        'task2.errInvalid':  'غير مسموح بالارقام او الرموز او المسافات من فضلك اختر يوم',
+        'task2.errEmpty':    'من فضلك اكتب يوماً.',
+        'task2.unknown':     'يبدو أنك اخترت:',
     },
     en: {
         'app.title':        'JavaScript Applications',
@@ -70,6 +79,15 @@ const dict = {
         'task1.result':     'Result:',
         'task1.errInvalid': 'Please enter valid numbers in both fields.',
         'task1.errDivZero': 'Cannot divide by zero.',
+
+        // task2 (favorite day) strings
+        'task2.title':       'What is your Favorite Day?',
+        'task2.placeholder': 'Write your favorite day here',
+        'task2.btn':         '✓ Check',
+        'task2.errMixed':    'You typed in both Arabic and English, please choose one',
+        'task2.errInvalid':  'Numbers, symbols and spaces are not allowed, please enter a day',
+        'task2.errEmpty':    'Please write a day.',
+        'task2.unknown':     'It seems you chose:',
     },
 };
 
