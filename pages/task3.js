@@ -1,72 +1,185 @@
+// the logic here is to working with the array data object and how we add elements to the dom
+
+
 import { t } from '../i18n.js';
 
 export const styles = `
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #fbf6f3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        padding: 20px;
-    }
-
-    .stub-card {
-        background-color: #ffffff;
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
         padding: 40px;
-        margin:auto auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 24px;
+        background: linear-gradient(180deg, #06142d 0%, #c76b4f 100%);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .task-title {
         text-align: center;
-        max-width: 480px;
+        color: #ffffff;
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    .task-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .task-input {
         width: 100%;
-        border-left: 4px solid #c76b4f;
-        margin: auto auto;
-        margin-top: 5%;
+        max-width: 700px;
+        height: 64px;
+        padding: 0 24px;
+        border-radius: 14px;
+        border: 2px solid rgba(255,255,255,0.12);
+        background: rgba(0,0,0,0.25);
+        color: #ffffff;
+        font-size: 18px;
+        outline: none;
     }
 
-    .stub-card i {
-        font-size: 48px;
-        color: #a5533a;
-        margin-bottom: 16px;
+    .task-input::placeholder {
+        color: rgba(255,255,255,0.55);
     }
 
-    .stub-card h1 {
+    .task-input:focus {
+        border-color: #f7e9e3;
+    }
+
+    .add-btn {
+        min-width: 220px;
+        height: 64px;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+        color: #ffffff;
         font-size: 22px;
-        color: #333333;
-        margin-bottom: 10px;
+        font-weight: 600;
+        background: linear-gradient(
+            135deg,
+            #06142d 0%,
+            #a5533a 100%
+        );
+        box-shadow: 0 0 24px rgba(63, 169, 255, 0.35);
+        transition: transform .2s ease;
     }
 
-    .stub-card p {
-        font-size: 14px;
-        color: #555555;
-        line-height: 1.6;
+    .add-btn:hover {
+        transform: translateY(-2px);
     }
 
-    .stub-card .badge {
-        display: inline-block;
-        margin-top: 18px;
-        padding: 6px 14px;
-        background-color: #eaf3fb;
+    .task-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .task-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 28px;
+        border-radius: 16px;
+        background: #f7e9e3;
+    }
+
+    .task-text {
         color: #c76b4f;
-        border-radius: 999px;
-        font-size: 13px;
-        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .delete-btn {
+        width: 64px;
+        height: 64px;
+        border: none;
+        border-radius: 14px;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 24px;
+        background: linear-gradient(
+            135deg,
+            #f7e9e3 0%,
+            #c76b4f 100%
+            );
     }
 `;
 
-
 export function render() {
     return `
-        <div class="stub-card">
-            <i class="fas fa-hourglass-half"></i>
-            <h1>${t('stub.taskLabel')} 3 — ${t('stub.comingSoon')}</h1>
-            <p>${t('stub.description')}</p>
-            <span class="badge">#task3</span>
+        <div class="container">
+
+            <h1 class="task-title">
+                ${t('task3.title')}
+            </h1>
+
+            <div class="task-form">
+                <input
+                    id="taskInput"
+                    class="task-input"
+                    type="text"
+                    placeholder="${t('task3.placeholder')}"
+                />
+
+                <button id="addTaskBtn" class="add-btn">
+                    + ${t('task3.add')}
+                </button>
+            </div>
+
+            <div id="taskList" class="task-list">
+                <!-- Tasks rendered here -->
+            </div>
+
         </div>
     `;
 }
 
 export function init() {
-    return function cleanup() {};
+    const taskInput = document.getElementById('taskInput');
+    const addTaskBtn = document.getElementById('addTaskBtn');
+    const taskList = document.getElementById('taskList');
+
+
+    function handleAddTask() {
+        // console.log(taskInput.value);
+        if (!taskInput.value.trim()) return;
+
+        const newTaskElement = document.createElement("div");
+        newTaskElement.classList.add("task-item");
+
+        const taskPara = document.createElement("p");
+        taskPara.classList.add("task-text");
+
+        const textSpan = document.createElement("span");
+        textSpan.textContent = taskInput.value;
+        taskPara.appendChild(textSpan);
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.classList.add("delete-btn");
+
+        const iconSpan = document.createElement("span");
+        iconSpan.textContent = "×";
+        deleteBtn.appendChild(iconSpan);
+
+        deleteBtn.addEventListener("click", () => {
+            newTaskElement.remove();
+        });
+
+        // console.log(newTaskElement);
+        taskList.appendChild(newTaskElement);
+        newTaskElement.appendChild(taskPara);
+        newTaskElement.appendChild(deleteBtn);
+
+        // clear the value
+        taskInput.value = "";
+    }
+
+    addTaskBtn.addEventListener('click', handleAddTask);
+
+    return function cleanup() {
+        addTaskBtn?.removeEventListener('click', handleAddTask);
+    };
 }

@@ -15,7 +15,9 @@ const TOTAL_TASKS = 22;
 
 const featuredCards = [
     { taskId: 'task1', icon: 'fa-calculator', titleKey: 'card.task1.title', descKey: 'card.task1.desc' },
-    { taskId: 'task2', icon: 'fa-calculator', titleKey: 'card.task2.title', descKey: 'card.task2.desc' },
+    { taskId: 'task2', icon: 'fa-solid fa-calendar-week', titleKey: 'card.task2.title', descKey: 'card.task2.desc' },
+    { taskId: 'task3', icon: 'fa-solid fa-list-check', titleKey: 'card.task3.title', descKey: 'card.task3.desc' },
+
 ];
 
 // ── Render shell components ───────────────────────────────────

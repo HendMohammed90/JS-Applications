@@ -25,6 +25,10 @@ const dict = {
         'card.task2.title': 'مخطط ايام الاسبوع',
         'card.task2.desc': 'ما هو يومك المفضل وسنخبرك برساله مميزة',
 
+        //task 3
+        'card.task3.title': 'مدير قائمة المهام',
+        'card.task3.desc': "أضف مهمتك المفضلة وابدأ العمل",
+
         'card.viewApp': 'عرض التطبيق',
 
         'nav.taskPrefix': 'تطبيق',
@@ -55,6 +59,11 @@ const dict = {
         'task2.errEmpty': 'من فضلك اكتب يوماً.',
         'task2.unknown': 'يبدو أنك اخترت:',
         'task2.errWrongScript': 'الرجاء الكتابة بالعربية',
+
+        // task3 ToDo list
+        "task3.title": "قائمة المهام",
+        "task3.placeholder": "اضف مهمة جديدة",
+        "task3.add": "اضافة"
     },
     en: {
         'app.title': 'JavaScript Applications',
@@ -71,6 +80,10 @@ const dict = {
         //task 2
         'card.task2.title': 'Weekly Planner',
         'card.task2.desc': "What's your favorite day and we'll tell you in a special message",
+
+        //task 3
+        'card.task3.title': 'Task list Manager',
+        'card.task3.desc': "Add your favorite task and start working",
 
         'card.viewApp': 'View App',
 
@@ -102,6 +115,12 @@ const dict = {
         'task2.errEmpty': 'Please write a day.',
         'task2.unknown': 'It seems you chose:',
         'task2.errWrongScript': 'Please type in English',
+
+        // task3 ToDo list
+        "task3.title": "Task list",
+        "task3.placeholder": "Add a new task",
+        "task3.add": "Add"
+
     },
 };
 
