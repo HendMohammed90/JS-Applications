@@ -142,27 +142,33 @@ export function init() {
     const addTaskBtn = document.getElementById('addTaskBtn');
     const taskList = document.getElementById('taskList');
 
+    const createElementFunc = (type, props, ...children) => {
+        const newItem = document.createElement(type);
+        props ? newItem.classList.add(props) : null;
+        if (children) {
+            for (let i = 0; i < children.length; i++) {
+                if (typeof (children[i]) === 'string') {
+                    let node = document.createTextNode(children[i]);
+                    newItem.appendChild(node)
+                } else {
+                    newItem.appendChild(children[i])
+                }
+            }
+        }
+        // console.log(newItem);
+        return newItem
+    }
+
 
     function handleAddTask() {
         // console.log(taskInput.value);
         if (!taskInput.value.trim()) return;
+        const newTaskElement = createElementFunc("div", "task-item")
+        const textSpan = createElementFunc("span", "", taskInput.value)
+        const taskPara = createElementFunc("p", "task-text", textSpan)
+        const iconSpan = createElementFunc("span", "", "×")
+        const deleteBtn = createElementFunc("button", "delete-btn", iconSpan)
 
-        const newTaskElement = document.createElement("div");
-        newTaskElement.classList.add("task-item");
-
-        const taskPara = document.createElement("p");
-        taskPara.classList.add("task-text");
-
-        const textSpan = document.createElement("span");
-        textSpan.textContent = taskInput.value;
-        taskPara.appendChild(textSpan);
-
-        const deleteBtn = document.createElement("button");
-        deleteBtn.classList.add("delete-btn");
-
-        const iconSpan = document.createElement("span");
-        iconSpan.textContent = "×";
-        deleteBtn.appendChild(iconSpan);
 
         deleteBtn.addEventListener("click", () => {
             newTaskElement.remove();
