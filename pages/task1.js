@@ -128,8 +128,13 @@ export function init() {
         return true;
     }
 
-    function handleAdd()      { const { a, b } = getValues(); if (isValid(a, b)) showResult(a + b); }
+    function handleAdd() { const { a, b } = getValues(); if (isValid(a, b)) showResult(a + b); }
     function handleSubtract() { const { a, b } = getValues(); if (isValid(a, b)) showResult(a - b); }
+    // ternary operator case
+    // function handleSubtract() {
+    //     const { a, b } = getValues();
+    //     isValid(a, b) ? showResult(a - b) : showResult(t('task1.errDivZero'));
+    // }
     function handleMultiply() { const { a, b } = getValues(); if (isValid(a, b)) showResult(a * b); }
     function handleDivide() {
         const { a, b } = getValues();
