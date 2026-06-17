@@ -141,10 +141,10 @@ export function init() {
     // English keys (lowercase) mapped to the same Arabic messages
     "saturday": "saturday is a new start",
     "sunday": "sunday is a special for everyone!",
-    "monday": "sunday is the active day",
+    "monday": "monday is the active day",
     "tuesday": "tuesday have way have been cut.",
     "wednesday": "wednesday is almost to get break",
-    "thursday": "the key for holiday",
+    "thursday": "thursday is the key for holiday",
     "friday": "relax it's friday"
   };
 
@@ -177,36 +177,47 @@ export function init() {
     return cleanStr;
   }
 
+  //check language fun
+  const checkLang = (input) => {
+    // clear previous error messages
+    message.textContent = "";
+
+    // check val language detection
+    const hasArabic = /[\u0600-\u06FF]/.test(input);
+    const hasEnglish = /[a-zA-Z]/.test(input);
+
+    let res;
+    switch (true) {
+      case (hasArabic && hasEnglish):
+        message.textContent = t('task2.errMixed');
+        break;
+      case (hasArabic && uiLang === 'en'):
+        message.textContent = t('task2.errWrongScript');
+        break;
+      case (hasEnglish && uiLang === 'ar'):
+        message.textContent = t('task2.errWrongScript');
+        break;
+      case hasArabic:
+        res = normalizeArabic(input);
+        handleClick(res);
+        break;
+      case hasEnglish:
+        res = normalizeEnglishDay(input);
+        handleClick(res);
+        break;
+      default:
+        message.textContent = t('task2.errInvalid');
+        break;
+    }
+  }
 
   // handel input click
   const handleInputValidation = (e) => {
-
     // get value of the input field and replace any digits (0-9) or (١-٩) with an empty string
     const currentInputValue = e.target.value.replace(/[\d\u0660-\u0669\-=\/'\[\],.؛،;]/g, '');;
     // console.log(`currentInputValue before fixing ${currentInputValue}`)
 
-    // clear previous error messages
-    message.textContent = "";
-
-    // check on the val language detection
-    const hasArabic = /[\u0600-\u06FF]/.test(currentInputValue);
-    const hasEnglish = /[a-zA-Z]/.test(currentInputValue);
-
-    if (hasArabic && hasEnglish) {
-      message.textContent = t('task2.errMixed');
-    } else if (hasArabic && uiLang === 'en') {
-      message.textContent = t('task2.errWrongScript');
-    } else if (hasEnglish && uiLang === 'ar') {
-      message.textContent = t('task2.errWrongScript');
-    } else if (hasArabic) {
-      const res = normalizeArabic(currentInputValue);
-      handleClick(res);
-    } else if (hasEnglish) {
-      const res = normalizeEnglishDay(currentInputValue);
-      handleClick(res);
-    } else {
-      message.textContent = t('task2.errInvalid');
-    }
+    checkLang(currentInputValue)
   };
 
 
