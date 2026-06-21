@@ -29,6 +29,11 @@ const dict = {
         'card.task3.title': 'مدير قائمة المهام',
         'card.task3.desc': "أضف مهمتك المفضلة وابدأ العمل",
 
+        //task 4
+        'card.task4.title': 'رسالة ترحيب',
+        'card.task4.desc': "أضف بياناتك، وسنرحب بك.",
+
+
         'card.viewApp': 'عرض التطبيق',
 
         'nav.taskPrefix': 'تطبيق',
@@ -63,7 +68,16 @@ const dict = {
         // task3 ToDo list
         "task3.title": "قائمة المهام",
         "task3.placeholder": "اضف مهمة جديدة",
-        "task3.add": "اضافة"
+        "task3.add": "اضافة",
+
+        // task4 user welcoming
+        "task4.title": "أدخل معلوماتك",
+        "task4.name": "اسمك",
+        "task4.age": "عمرك",
+        "task4.hobby": "هوايتك",
+        "task4.showMessage": "عرض الرسالة",
+        "task4.message": "الرسالة",
+        "task4.errEmpty": "يرجى ملء جميع الحقول",
     },
     en: {
         'app.title': 'JavaScript Applications',
@@ -84,6 +98,10 @@ const dict = {
         //task 3
         'card.task3.title': 'Task list Manager',
         'card.task3.desc': "Add your favorite task and start working",
+
+        //task 4
+        'card.task4.title': 'welcoming message',
+        'card.task4.desc': "Add your data, and we will greet you.",
 
         'card.viewApp': 'View App',
 
@@ -119,7 +137,16 @@ const dict = {
         // task3 ToDo list
         "task3.title": "Task list",
         "task3.placeholder": "Add a new task",
-        "task3.add": "Add"
+        "task3.add": "Add",
+
+        // task4 user welcoming
+        "task4.title": "Enter your information",
+        "task4.name": "Your name",
+        "task4.age": "Your age",
+        "task4.hobby": "Your hobby",
+        "task4.showMessage": "Show Message",
+        "task4.message": "Message",
+        "task4.errEmpty": "Please fill all fields"
 
     },
 };
