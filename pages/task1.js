@@ -82,27 +82,27 @@ export const styles = `
 export function render() {
     return `
         <div class="container">
-            <h1 id="cal-heading">${t('task1.title')}</h1>
+            <h1 id="cal-heading">${t('task2.title')}</h1>
 
             <div class="form-group">
-                <label for="numA">${t('task1.firstNum')}</label>
+                <label for="numA">${t('task2.firstNum')}</label>
                 <input type="number" id="numA" placeholder="10" />
             </div>
 
             <div class="form-group">
-                <label for="numB">${t('task1.secondNum')}</label>
+                <label for="numB">${t('task2.secondNum')}</label>
                 <input type="number" id="numB" placeholder="5" />
             </div>
 
             <div class="btn-grid">
-                <button id="addBtn">${t('task1.add')}</button>
-                <button id="subtractBtn">${t('task1.subtract')}</button>
-                <button id="multiplyBtn">${t('task1.multiply')}</button>
-                <button id="divideBtn">${t('task1.divide')}</button>
+                <button id="addBtn">${t('task2.add')}</button>
+                <button id="subtractBtn">${t('task2.subtract')}</button>
+                <button id="multiplyBtn">${t('task2.multiply')}</button>
+                <button id="divideBtn">${t('task2.divide')}</button>
             </div>
 
             <div id="result">
-                <p>${t('task1.result')} <span id="displayResult"></span></p>
+                <p>${t('task2.result')} <span id="displayResult"></span></p>
             </div>
         </div>
     `;
@@ -122,7 +122,7 @@ export function init() {
 
     function isValid(a, b) {
         if (isNaN(a) || isNaN(b)) {
-            showResult(t('task1.errInvalid'));
+            showResult(t('task2.errInvalid'));
             return false;
         }
         return true;
@@ -133,13 +133,13 @@ export function init() {
     // ternary operator case
     // function handleSubtract() {
     //     const { a, b } = getValues();
-    //     isValid(a, b) ? showResult(a - b) : showResult(t('task1.errDivZero'));
+    //     isValid(a, b) ? showResult(a - b) : showResult(t('task2.errDivZero'));
     // }
     function handleMultiply() { const { a, b } = getValues(); if (isValid(a, b)) showResult(a * b); }
     function handleDivide() {
         const { a, b } = getValues();
         if (!isValid(a, b)) return;
-        if (b === 0) { showResult(t('task1.errDivZero')); return; }
+        if (b === 0) { showResult(t('task2.errDivZero')); return; }
         showResult(a / b);
     }
 

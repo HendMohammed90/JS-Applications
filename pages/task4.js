@@ -80,7 +80,7 @@ export function render() {
         <div class="container">
 
             <h1 class="page-title">
-                ${t('task4.title')}
+                ${t('task1.title')}
             </h1>
 
             <div class="form-group">
@@ -88,7 +88,7 @@ export function render() {
                     type="text"
                     id="userName"
                     class="form-input"
-                    placeholder="${t('task4.name')}"
+                    placeholder="${t('task1.name')}"
                 />
             </div>
 
@@ -97,7 +97,7 @@ export function render() {
                     type="number"
                     id="userAge"
                     class="form-input"
-                    placeholder="${t('task4.age')}"
+                    placeholder="${t('task1.age')}"
                 />
             </div>
 
@@ -106,12 +106,12 @@ export function render() {
                     type="text"
                     id="userHobby"
                     class="form-input"
-                    placeholder="${t('task4.hobby')}"
+                    placeholder="${t('task1.hobby')}"
                 />
             </div>
 
             <button id="showBtn">
-                ${t('task4.showMessage')}
+                ${t('task1.showMessage')}
             </button>
 
             <h1 id="message"></h1>

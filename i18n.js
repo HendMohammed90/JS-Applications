@@ -18,20 +18,20 @@ const dict = {
         'hero.welcome': 'مرحباً بك في منصة تطبيقات الجافاسكريبت',
 
         //task 1
-        'card.task1.title': 'آلة حاسبة تفاعلية',
-        'card.task1.desc': 'آلة حاسبة متطورة تدعم العمليات الحسابية الأساسية',
+        'card.task1.title': 'رسالة ترحيب',
+        'card.task1.desc': "أضف بياناتك، وسنرحب بك.",
 
         //task 2
-        'card.task2.title': 'مخطط ايام الاسبوع',
-        'card.task2.desc': 'ما هو يومك المفضل وسنخبرك برساله مميزة',
+        'card.task2.title': 'آلة حاسبة تفاعلية',
+        'card.task2.desc': 'آلة حاسبة متطورة تدعم العمليات الحسابية الأساسية',
 
         //task 3
-        'card.task3.title': 'مدير قائمة المهام',
-        'card.task3.desc': "أضف مهمتك المفضلة وابدأ العمل",
+        'card.task3.title': 'مخطط ايام الاسبوع',
+        'card.task3.desc': 'ما هو يومك المفضل وسنخبرك برساله مميزة',
 
         //task 4
-        'card.task4.title': 'رسالة ترحيب',
-        'card.task4.desc': "أضف بياناتك، وسنرحب بك.",
+        'card.task4.title': 'مدير قائمة المهام',
+        'card.task4.desc': "أضف مهمتك المفضلة وابدأ العمل",
 
 
         'card.viewApp': 'عرض التطبيق',
@@ -43,41 +43,41 @@ const dict = {
         'stub.description': 'هذه المهمة مسجلة في الراوتر وجاهزة للتنفيذ.',
         'stub.taskLabel': 'مهمة',
 
-        // task1 (calculator) strings
-        'task1.title': 'نموذج الآلة الحاسبة',
-        'task1.firstNum': 'الرقم الأول',
-        'task1.secondNum': 'الرقم الثاني',
-        'task1.add': '➕ جمع',
-        'task1.subtract': '➖ طرح',
-        'task1.multiply': '✖ ضرب',
-        'task1.divide': '➗ قسمة',
-        'task1.result': 'النتيجة:',
-        'task1.errInvalid': 'الرجاء إدخال أرقام صحيحة في الحقلين.',
-        'task1.errDivZero': 'لا يمكن القسمة على صفر.',
+        // task1 user welcoming
+        "task1.title": "أدخل معلوماتك",
+        "task1.name": "اسمك",
+        "task1.age": "عمرك",
+        "task1.hobby": "هوايتك",
+        "task1.showMessage": "عرض الرسالة",
+        "task1.message": "الرسالة",
+        "task1.errEmpty": "يرجى ملء جميع الحقول",
 
-        // task2 (favorite day) strings
-        'task2.title': 'ما هو يومك المفضل؟',
-        'task2.placeholder': 'اكتب هنا يومك المفضل',
-        'task2.btn': '✓ تحقق',
-        'task2.errMixed': 'لقد كتبت بالغتين العربية و الانجليزية اختر واحده',
-        'task2.errInvalid': 'غير مسموح بالارقام او الرموز او المسافات من فضلك اختر يوم',
-        'task2.errEmpty': 'من فضلك اكتب يوماً.',
-        'task2.unknown': 'يبدو أنك اخترت:',
-        'task2.errWrongScript': 'الرجاء الكتابة بالعربية',
+        // task2 (calculator) strings
+        'task2.title': 'نموذج الآلة الحاسبة',
+        'task2.firstNum': 'الرقم الأول',
+        'task2.secondNum': 'الرقم الثاني',
+        'task2.add': '➕ جمع',
+        'task2.subtract': '➖ طرح',
+        'task2.multiply': '✖ ضرب',
+        'task2.divide': '➗ قسمة',
+        'task2.result': 'النتيجة:',
+        'task2.errInvalid': 'الرجاء إدخال أرقام صحيحة في الحقلين.',
+        'task2.errDivZero': 'لا يمكن القسمة على صفر.',
 
-        // task3 ToDo list
-        "task3.title": "قائمة المهام",
-        "task3.placeholder": "اضف مهمة جديدة",
-        "task3.add": "اضافة",
+        // task3 (favorite day) strings
+        'task3.title': 'ما هو يومك المفضل؟',
+        'task3.placeholder': 'اكتب هنا يومك المفضل',
+        'task3.btn': '✓ تحقق',
+        'task3.errMixed': 'لقد كتبت بالغتين العربية و الانجليزية اختر واحده',
+        'task3.errInvalid': 'غير مسموح بالارقام او الرموز او المسافات من فضلك اختر يوم',
+        'task3.errEmpty': 'من فضلك اكتب يوماً.',
+        'task3.unknown': 'يبدو أنك اخترت:',
+        'task3.errWrongScript': 'الرجاء الكتابة بالعربية',
 
-        // task4 user welcoming
-        "task4.title": "أدخل معلوماتك",
-        "task4.name": "اسمك",
-        "task4.age": "عمرك",
-        "task4.hobby": "هوايتك",
-        "task4.showMessage": "عرض الرسالة",
-        "task4.message": "الرسالة",
-        "task4.errEmpty": "يرجى ملء جميع الحقول",
+        // task4 ToDo list
+        "task4.title": "قائمة المهام",
+        "task4.placeholder": "اضف مهمة جديدة",
+        "task4.add": "اضافة",
     },
     en: {
         'app.title': 'JavaScript Applications',
@@ -88,20 +88,20 @@ const dict = {
         'hero.welcome': 'Welcome to simple JS Applications Platform',
 
         //task 1
-        'card.task1.title': 'Interactive Calculator',
-        'card.task1.desc': 'A modern calculator supporting basic arithmetic operations.',
+        'card.task1.title': 'welcoming message',
+        'card.task1.desc': "Add your data, and we will greet you.",
 
         //task 2
-        'card.task2.title': 'Weekly Planner',
-        'card.task2.desc': "What's your favorite day and we'll tell you in a special message",
+        'card.task2.title': 'Interactive Calculator',
+        'card.task2.desc': 'A modern calculator supporting basic arithmetic operations.',
 
         //task 3
-        'card.task3.title': 'Task list Manager',
-        'card.task3.desc': "Add your favorite task and start working",
+        'card.task3.title': 'Weekly Planner',
+        'card.task3.desc': "What's your favorite day and we'll tell you in a special message",
 
         //task 4
-        'card.task4.title': 'welcoming message',
-        'card.task4.desc': "Add your data, and we will greet you.",
+        'card.task4.title': 'Task list Manager',
+        'card.task4.desc': "Add your favorite task and start working",
 
         'card.viewApp': 'View App',
 
@@ -112,41 +112,41 @@ const dict = {
         'stub.description': 'This task is registered in the router and ready to be implemented.',
         'stub.taskLabel': 'Task',
 
-        // task1 (calculator) strings
-        'task1.title': 'Calculator Form',
-        'task1.firstNum': 'First Number',
-        'task1.secondNum': 'Second Number',
-        'task1.add': '➕ Add',
-        'task1.subtract': '➖ Subtract',
-        'task1.multiply': '✖ Multiply',
-        'task1.divide': '➗ Divide',
-        'task1.result': 'Result:',
-        'task1.errInvalid': 'Please enter valid numbers in both fields.',
-        'task1.errDivZero': 'Cannot divide by zero.',
+        // task1 user welcoming
+        "task1.title": "Enter your information",
+        "task1.name": "Your name",
+        "task1.age": "Your age",
+        "task1.hobby": "Your hobby",
+        "task1.showMessage": "Show Message",
+        "task1.message": "Message",
+        "task1.errEmpty": "Please fill all fields",
 
-        // task2 (favorite day) strings
-        'task2.title': 'What is your Favorite Day?',
-        'task2.placeholder': 'Write your favorite day here',
-        'task2.btn': '✓ Check',
-        'task2.errMixed': 'You typed in both Arabic and English, please choose one',
-        'task2.errInvalid': 'Numbers, symbols and spaces are not allowed, please enter a day',
-        'task2.errEmpty': 'Please write a day.',
-        'task2.unknown': 'It seems you chose:',
-        'task2.errWrongScript': 'Please type in English',
+        // task2 (calculator) strings
+        'task2.title': 'Calculator Form',
+        'task2.firstNum': 'First Number',
+        'task2.secondNum': 'Second Number',
+        'task2.add': '➕ Add',
+        'task2.subtract': '➖ Subtract',
+        'task2.multiply': '✖ Multiply',
+        'task2.divide': '➗ Divide',
+        'task2.result': 'Result:',
+        'task2.errInvalid': 'Please enter valid numbers in both fields.',
+        'task2.errDivZero': 'Cannot divide by zero.',
 
-        // task3 ToDo list
-        "task3.title": "Task list",
-        "task3.placeholder": "Add a new task",
-        "task3.add": "Add",
+        // task3 (favorite day) strings
+        'task3.title': 'What is your Favorite Day?',
+        'task3.placeholder': 'Write your favorite day here',
+        'task3.btn': '✓ Check',
+        'task3.errMixed': 'You typed in both Arabic and English, please choose one',
+        'task3.errInvalid': 'Numbers, symbols and spaces are not allowed, please enter a day',
+        'task3.errEmpty': 'Please write a day.',
+        'task3.unknown': 'It seems you chose:',
+        'task3.errWrongScript': 'Please type in English',
 
-        // task4 user welcoming
-        "task4.title": "Enter your information",
-        "task4.name": "Your name",
-        "task4.age": "Your age",
-        "task4.hobby": "Your hobby",
-        "task4.showMessage": "Show Message",
-        "task4.message": "Message",
-        "task4.errEmpty": "Please fill all fields"
+        // task4 ToDo list
+        "task4.title": "Task list",
+        "task4.placeholder": "Add a new task",
+        "task4.add": "Add"
 
     },
 };

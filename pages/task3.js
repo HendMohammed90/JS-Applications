@@ -113,7 +113,7 @@ export function render() {
         <div class="container">
 
             <h1 class="task-title">
-                ${t('task3.title')}
+                ${t('task4.title')}
             </h1>
 
             <div class="task-form">
@@ -121,11 +121,11 @@ export function render() {
                     id="taskInput"
                     class="task-input"
                     type="text"
-                    placeholder="${t('task3.placeholder')}"
+                    placeholder="${t('task4.placeholder')}"
                 />
 
                 <button id="addTaskBtn" class="add-btn">
-                    + ${t('task3.add')}
+                    + ${t('task4.add')}
                 </button>
             </div>
 

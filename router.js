@@ -2,10 +2,10 @@ import { onLanguageChange } from './i18n.js';
 
 // import all pages using (lazy loading).
 const routes = {
-    task1:  () => import('./pages/task1.js'),
-    task2:  () => import('./pages/task2.js'),
-    task3:  () => import('./pages/task3.js'),
-    task4:  () => import('./pages/task4.js'),
+    task1:  () => import('./pages/task4.js'),
+    task2:  () => import('./pages/task1.js'),
+    task3:  () => import('./pages/task2.js'),
+    task4:  () => import('./pages/task3.js'),
     task5:  () => import('./pages/task5.js'),
     task6:  () => import('./pages/task6.js'),
     task7:  () => import('./pages/task7.js'),

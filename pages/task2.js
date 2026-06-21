@@ -100,19 +100,19 @@ export function render() {
   return `
     <div class="container">
     <div class="day-checker">
-      <h1>${t('task2.title')}</h1>
+      <h1>${t('task3.title')}</h1>
 
       <input
         id="favorite-day"
         class="day-input"
         type="text"
-        placeholder="${t('task2.placeholder')}"
+        placeholder="${t('task3.placeholder')}"
       />
 
       <br />
 
       <button id="check-btn" class="check-btn">
-        ${t('task2.btn')}
+        ${t('task3.btn')}
       </button>
       <div id="message" class="message"></div>
       <div id="result" class="result"></div>
@@ -189,13 +189,13 @@ export function init() {
     let res;
     switch (true) {
       case (hasArabic && hasEnglish):
-        message.textContent = t('task2.errMixed');
+        message.textContent = t('task3.errMixed');
         break;
       case (hasArabic && uiLang === 'en'):
-        message.textContent = t('task2.errWrongScript');
+        message.textContent = t('task3.errWrongScript');
         break;
       case (hasEnglish && uiLang === 'ar'):
-        message.textContent = t('task2.errWrongScript');
+        message.textContent = t('task3.errWrongScript');
         break;
       case hasArabic:
         res = normalizeArabic(input);
@@ -206,7 +206,7 @@ export function init() {
         handleClick(res);
         break;
       default:
-        message.textContent = t('task2.errInvalid');
+        message.textContent = t('task3.errInvalid');
         break;
     }
   }
@@ -224,12 +224,12 @@ export function init() {
   const handleClick = (currentDataVal) => {
 
     if (!currentDataVal) {
-      result.textContent = t('task2.errEmpty');
+      result.textContent = t('task3.errEmpty');
       return;
     }
 
     // exact lookup or return user data
-    result.textContent = messages[currentDataVal] || `${t('task2.unknown')} ${currentDataVal}`;
+    result.textContent = messages[currentDataVal] || `${t('task3.unknown')} ${currentDataVal}`;
   };
 
   input.addEventListener('input', handleInputValidation);
