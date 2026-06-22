@@ -33,6 +33,10 @@ const dict = {
         'card.task4.title': 'مدير قائمة المهام',
         'card.task4.desc': "أضف مهمتك المفضلة وابدأ العمل",
 
+        //task 5
+        'card.task5.title': 'قائمة المنتجات',
+        'card.task5.desc': 'صف المنتجات حسب السعر أو حرف البداية',
+
 
         'card.viewApp': 'عرض التطبيق',
 
@@ -78,6 +82,27 @@ const dict = {
         "task4.title": "قائمة المهام",
         "task4.placeholder": "اضف مهمة جديدة",
         "task4.add": "اضافة",
+
+        // task5 products menu
+        "task5.title": "قائمة المنتجات",
+        "task5.maxPriceLabel": "السعر الأقصى",
+        "task5.maxPricePlaceholder": "السعر الأقصى",
+        "task5.priceCategory": "الفئة السعرية",
+        "task5.all": "الكل",
+        "task5.low": "منخفض",
+        "task5.medium": "متوسط",
+        "task5.high": "مرتفع",
+        "task5.startsWithLabel": "بحرف البداية",
+        "task5.startsWithPlaceholder": "حرف البداية",
+        "task5.filter": "تصفية",
+        "task5.productsCount": "عدد المنتجات",
+        "task5.currency": "جنيه",
+        "task5.empty": "لا توجد منتجات مطابقة",
+        "task5.product.watch": "ساعة يد",
+        "task5.product.backpack": "حقيبة ظهر",
+        "task5.product.headphones": "سماعة رأس",
+        "task5.product.bottle": "زجاجة ماء",
+        "task5.product.notebook": "دفتر ملاحظات",
     },
     en: {
         'app.title': 'JavaScript Applications',
@@ -102,6 +127,10 @@ const dict = {
         //task 4
         'card.task4.title': 'Task list Manager',
         'card.task4.desc': "Add your favorite task and start working",
+
+        //task 5
+        'card.task5.title': 'Products Menu',
+        'card.task5.desc': 'Filter products by price or starting letter',
 
         'card.viewApp': 'View App',
 
@@ -146,7 +175,28 @@ const dict = {
         // task4 ToDo list
         "task4.title": "Task list",
         "task4.placeholder": "Add a new task",
-        "task4.add": "Add"
+        "task4.add": "Add",
+
+        // task5 products menu
+        "task5.title": "Products Menu",
+        "task5.maxPriceLabel": "Max Price",
+        "task5.maxPricePlaceholder": "Max price",
+        "task5.priceCategory": "Price Category",
+        "task5.all": "All",
+        "task5.low": "Low",
+        "task5.medium": "Medium",
+        "task5.high": "High",
+        "task5.startsWithLabel": "Starts With",
+        "task5.startsWithPlaceholder": "Starting letter",
+        "task5.filter": "Filter",
+        "task5.productsCount": "Products count",
+        "task5.currency": "EGP",
+        "task5.empty": "No matching products",
+        "task5.product.watch": "Watch",
+        "task5.product.backpack": "Backpack",
+        "task5.product.headphones": "Headphones",
+        "task5.product.bottle": "Water Bottle",
+        "task5.product.notebook": "Notebook"
 
     },
 };
