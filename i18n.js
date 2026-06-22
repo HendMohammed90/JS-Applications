@@ -37,6 +37,10 @@ const dict = {
         'card.task5.title': 'قائمة المنتجات',
         'card.task5.desc': 'صف المنتجات حسب السعر أو حرف البداية',
 
+        //task 6
+        'card.task6.title': 'قائمة المنتجات مع القيمة الضريبية',
+        'card.task6.desc': ' سعر المنتجات قبل وبعد الضريبة',
+
 
         'card.viewApp': 'عرض التطبيق',
 
@@ -103,6 +107,9 @@ const dict = {
         "task5.product.headphones": "سماعة رأس",
         "task5.product.bottle": "زجاجة ماء",
         "task5.product.notebook": "دفتر ملاحظات",
+
+        // task6products with tax value
+        "task6.tax": "بعد الضريبة "
     },
     en: {
         'app.title': 'JavaScript Applications',
@@ -131,6 +138,10 @@ const dict = {
         //task 5
         'card.task5.title': 'Products Menu',
         'card.task5.desc': 'Filter products by price or starting letter',
+
+        //task 6
+        'card.task6.title': 'Products Menu with tax value',
+        'card.task6.desc': 'products price befor and after tax',
 
         'card.viewApp': 'View App',
 
@@ -196,7 +207,11 @@ const dict = {
         "task5.product.backpack": "Backpack",
         "task5.product.headphones": "Headphones",
         "task5.product.bottle": "Water Bottle",
-        "task5.product.notebook": "Notebook"
+        "task5.product.notebook": "Notebook",
+
+        // task6products with tax value
+        "task6.tax": "after tax "
+
 
     },
 };
