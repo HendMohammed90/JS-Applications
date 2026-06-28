@@ -117,6 +117,7 @@ const dict = {
 
         // task8
         "task8.title": "مكتبتنا",
+        "task8.labelBooks": "كتب",
         "task8.categoryLabel": "كتاب",
         "task8.authorLabel": "المؤلف:",
         "task8.pagesLabel": "الصفحات:",
@@ -229,6 +230,7 @@ const dict = {
 
         // task8
         "task8.title": "Our Library",
+        "task8.labelBooks": "Books",
         "task8.categoryLabel": "Book",
         "task8.authorLabel": "Author:",
         "task8.pagesLabel": "Pages:",

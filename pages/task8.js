@@ -212,7 +212,7 @@ document.documentElement.lang
         // console.log(category);
         return `
             <div class="lib-category-banner">
-                <span class="lib-category-name">${category}</span>
+                <span class="lib-category-name">${t('task8.labelBooks')}: ${category}</span>
             </div>
         `;
     }
