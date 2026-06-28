@@ -45,6 +45,9 @@ const dict = {
         'card.task8.title': ' المكتبة',
         'card.task8.desc': 'قائمة المكتبة مع أنواع مختلفة',
 
+        // task 9
+        'card.task9.title': 'قائمة المنتجات مع ميزة التعديل',
+        'card.task9.desc': 'تعديل سعر المنتجات',
 
         'card.viewApp': 'عرض التطبيق',
 
@@ -111,6 +114,8 @@ const dict = {
         "task5.product.headphones": "سماعة رأس",
         "task5.product.bottle": "زجاجة ماء",
         "task5.product.notebook": "دفتر ملاحظات",
+        "task5.delete": "حذف",
+        "task5.edit": "تعديل",
 
         // task6products with tax value
         "task6.tax": "بعد الضريبة ",
@@ -158,6 +163,10 @@ const dict = {
         // task 8
         'card.task8.title': 'Library Menu',
         'card.task8.desc': 'Library Menu with varaities of types',
+
+        // task 9
+        'card.task9.title': 'Products Menu with edit feature',
+        'card.task9.desc': 'Edit products price',
 
         'card.viewApp': 'View App',
 
@@ -224,6 +233,8 @@ const dict = {
         "task5.product.headphones": "Headphones",
         "task5.product.bottle": "Water Bottle",
         "task5.product.notebook": "Notebook",
+        "task5.delete": "Delete",
+        "task5.edit": "Edit",
 
         // task6products with tax value
         "task6.tax": "after tax ",
