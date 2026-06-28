@@ -41,6 +41,10 @@ const dict = {
         'card.task6.title': 'قائمة المنتجات مع القيمة الضريبية',
         'card.task6.desc': ' سعر المنتجات قبل وبعد الضريبة',
 
+        // task 8
+        'card.task8.title': ' المكتبة',
+        'card.task8.desc': 'قائمة المكتبة مع أنواع مختلفة',
+
 
         'card.viewApp': 'عرض التطبيق',
 
@@ -109,7 +113,14 @@ const dict = {
         "task5.product.notebook": "دفتر ملاحظات",
 
         // task6products with tax value
-        "task6.tax": "بعد الضريبة "
+        "task6.tax": "بعد الضريبة ",
+
+        // task8
+        "task8.title": "مكتبتنا",
+        "task8.categoryLabel": "كتاب",
+        "task8.authorLabel": "المؤلف:",
+        "task8.pagesLabel": "الصفحات:",
+        "task8.totalPages": "إجمالي الصفحات في المكتبة:"
     },
     en: {
         'app.title': 'JavaScript Applications',
@@ -142,6 +153,10 @@ const dict = {
         //task 6
         'card.task6.title': 'Products Menu with tax value',
         'card.task6.desc': 'products price befor and after tax',
+
+        // task 8
+        'card.task8.title': 'Library Menu',
+        'card.task8.desc': 'Library Menu with varaities of types',
 
         'card.viewApp': 'View App',
 
@@ -210,9 +225,14 @@ const dict = {
         "task5.product.notebook": "Notebook",
 
         // task6products with tax value
-        "task6.tax": "after tax "
+        "task6.tax": "after tax ",
 
-
+        // task8
+        "task8.title": "Our Library",
+        "task8.categoryLabel": "Book",
+        "task8.authorLabel": "Author:",
+        "task8.pagesLabel": "Pages:",
+        "task8.totalPages": "Total Pages in Library:"
     },
 };
 
