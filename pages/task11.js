@@ -1,71 +1,138 @@
 import { t } from '../i18n.js';
 
 export const styles = `
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #fbf6f3;
+    .clock-container {
+        max-width: 700px;
+        margin: 60px auto;
+        padding: 60px 40px;
+        border-radius: 24px;
+        background: linear-gradient(180deg, #2a1c18 0%, #1a100e 100%);
+        border: 1px solid #4a332d;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        direction: rtl;
+    }
+
+    .clock-title {
+        color: #fbf6f3;
+        font-size: 38px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        letter-spacing: 1px;
+    }
+
+    .clock-display {
+        font-size: 64px;
+        font-weight: 700;
+        color: #c76b4f;
+        margin-bottom: 50px;
+        font-family: monospace, sans-serif;
+        letter-spacing: 2px;
+        text-shadow: 0 0 20px rgba(199, 107, 79, 0.3);
+        direction: ltr;
+    }
+
+    .button-group {
         display: flex;
         justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        padding: 20px;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 
-    .stub-card {
-        background-color: #ffffff;
-        padding: 40px;
-        margin:auto auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        max-width: 480px;
-        width: 100%;
-        border-left: 4px solid #c76b4f;
-        margin: auto auto;
-        margin-top: 5%;
+    .clock-btn {
+        min-width: 150px;
+        padding: 16px 28px;
+        border: none;
+        border-radius: 14px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffffff;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+        background: linear-gradient(135deg, #a5533a 0%, #c76b4f 100%);
+        box-shadow: 0 4px 15px rgba(165, 83, 58, 0.25);
     }
 
-    .stub-card i {
-        font-size: 48px;
-        color: #a5533a;
-        margin-bottom: 16px;
+    .clock-btn:hover {
+        opacity: 0.95;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(199, 107, 79, 0.4);
     }
 
-    .stub-card h1 {
-        font-size: 22px;
-        color: #333333;
-        margin-bottom: 10px;
-    }
-
-    .stub-card p {
-        font-size: 14px;
-        color: #555555;
-        line-height: 1.6;
-    }
-
-    .stub-card .badge {
-        display: inline-block;
-        margin-top: 18px;
-        padding: 6px 14px;
-        background-color: #eaf3fb;
-        color: #c76b4f;
-        border-radius: 999px;
-        font-size: 13px;
-        font-weight: bold;
+    .clock-btn:active {
+        transform: translateY(0);
     }
 `;
 
 export function render() {
     return `
-        <div class="stub-card">
-            <i class="fas fa-hourglass-half"></i>
-            <h1>${t('stub.taskLabel')} 11 — ${t('stub.comingSoon')}</h1>
-            <p>${t('stub.description')}</p>
-            <span class="badge">#task11</span>
+        <div class="clock-container">
+            <h1 class="clock-title">${t('task11.title')}</h1>
+
+            <div id="result" class="clock-display">
+                ${t('task11.timePlaceholder')}
+            </div>
+
+            <div class="button-group">
+                <button id="startBtn" class="clock-btn">
+                    ${t('task11.start')}
+                </button>
+                <button id="stopBtn" class="clock-btn">
+                    ${t('task11.stop')}
+                </button>
+                <button id="linkBtn" class="clock-btn">
+                    ${t('task11.goToLink')}
+                </button>
+            </div>
         </div>
     `;
 }
 
 export function init() {
-    return function cleanup() {};
+    const startBtn = document.getElementById('startBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const linkBtn = document.getElementById('linkBtn');
+    const clockDisplay = document.getElementById('result');
+    let intervalId = null;
+
+
+    function handleStartClock() {
+        if (intervalId) return;
+        intervalId = setInterval(() => {
+            // update the display
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            // console.log(timeString)
+            clockDisplay.innerHTML = timeString
+        }, 1000);
+    }
+
+    function handleStopClock() {
+        clearInterval(intervalId);
+        intervalId = null;
+    }
+
+    function handleGoToLink() {
+        // TODO: Prompt an alert/input dialog to capture URL and perform safe redirect here
+        const url = prompt('Enter URL');
+        // https://www.google.com/
+        if (!url) return;
+        if (!url.startsWith('https://') && !url.startsWith('http://')) return;
+        // console.log(url)
+        window.location.href = url;
+    }
+
+    // Attach listeners
+    startBtn?.addEventListener('click', handleStartClock);
+    stopBtn?.addEventListener('click', handleStopClock);
+    linkBtn?.addEventListener('click', handleGoToLink);
+
+    // Return mandatory cleanup function
+    return function cleanup() {
+        startBtn?.removeEventListener('click', handleStartClock);
+        stopBtn?.removeEventListener('click', handleStopClock);
+        linkBtn?.removeEventListener('click', handleGoToLink);
+        clearInterval(intervalId);
+    };
 }

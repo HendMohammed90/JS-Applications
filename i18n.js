@@ -53,6 +53,10 @@ const dict = {
         'card.task10.title': 'نظام إدارة المستخدم',
         'card.task10.desc': 'تعرّف على كيفية إدارة جدول المستخدم مع إمكانيات الإضافة والحذف',
 
+        //task 11
+        'card.task11.title': 'الساعة التفاعلية',
+        'card.task11.desc': 'تعلم كيفية إنشاء ساعة تفاعلية مع إمكانيات التحكم باستخدام JavaScript.',
+
         'card.viewApp': 'عرض التطبيق',
 
         'nav.taskPrefix': 'تطبيق',
@@ -139,6 +143,13 @@ const dict = {
         "task10.email": "البريد الإلكتروني",
         "task10.showMessage": "إضافة مستخدم",
         "task10.errEmpty": "الرجاء ملء كافة الحقول",
+
+        // task11
+        "task11.title": "الساعة التفاعلية",
+        "task11.timePlaceholder": "12:00:00 PM",
+        "task11.start": "ابدأ الساعة",
+        "task11.stop": "أوقف الساعة",
+        "task11.goToLink": "اذهب إلى رابط"
     },
     en: {
         'app.title': 'JavaScript Applications',
@@ -183,6 +194,10 @@ const dict = {
         //task 10
         'card.task10.title': 'User Management System',
         'card.task10.desc': 'Learn how to manage a user schedule with add and delete capabilities',
+
+        //task 11
+        'card.task11.title': 'Interactive Clock',
+        'card.task11.desc': 'Learn how to create an interactive clock with control capabilities using JavaScript.',
 
         'card.viewApp': 'View App',
 
@@ -270,6 +285,13 @@ const dict = {
         "task10.email": "Email",
         "task10.showMessage": "Add user",
         "task10.errEmpty": "Please fill all fields",
+
+        // task11
+        "task11.title": "Interactive Clock",
+        "task11.timePlaceholder": "12:00:00 PM",
+        "task11.start": "Start the clock",
+        "task11.stop": "Stop the clock",
+        "task11.goToLink": "Go to link"
     },
 };
 
