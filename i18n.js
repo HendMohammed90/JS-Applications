@@ -49,6 +49,10 @@ const dict = {
         'card.task9.title': 'قائمة المنتجات مع ميزة التعديل',
         'card.task9.desc': 'تعديل سعر المنتجات',
 
+        //task 10
+        'card.task10.title': 'نظام إدارة المستخدم',
+        'card.task10.desc': 'تعرّف على كيفية إدارة جدول المستخدم مع إمكانيات الإضافة والحذف',
+
         'card.viewApp': 'عرض التطبيق',
 
         'nav.taskPrefix': 'تطبيق',
@@ -126,7 +130,15 @@ const dict = {
         "task8.categoryLabel": "كتاب",
         "task8.authorLabel": "المؤلف:",
         "task8.pagesLabel": "الصفحات:",
-        "task8.totalPages": "إجمالي الصفحات في المكتبة:"
+        "task8.totalPages": "إجمالي الصفحات في المكتبة:",
+
+        // task10 user mangment system
+        "task10.title": "نظام ادارة المستخدمين",
+        "task10.name": "الاسم",
+        "task10.age": "العمر",
+        "task10.email": "البريد الإلكتروني",
+        "task10.showMessage": "إضافة مستخدم",
+        "task10.errEmpty": "الرجاء ملء كافة الحقول",
     },
     en: {
         'app.title': 'JavaScript Applications',
@@ -167,6 +179,10 @@ const dict = {
         // task 9
         'card.task9.title': 'Products Menu with edit feature',
         'card.task9.desc': 'Edit products price',
+
+        //task 10
+        'card.task10.title': 'User Management System',
+        'card.task10.desc': 'Learn how to manage a user schedule with add and delete capabilities',
 
         'card.viewApp': 'View App',
 
@@ -245,7 +261,15 @@ const dict = {
         "task8.categoryLabel": "Book",
         "task8.authorLabel": "Author:",
         "task8.pagesLabel": "Pages:",
-        "task8.totalPages": "Total Pages in Library:"
+        "task8.totalPages": "Total Pages in Library:",
+
+        // task10 user mangment system
+        "task10.title": "User management system form",
+        "task10.name": "Name",
+        "task10.age": "Age",
+        "task10.email": "Email",
+        "task10.showMessage": "Add user",
+        "task10.errEmpty": "Please fill all fields",
     },
 };
 
