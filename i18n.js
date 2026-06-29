@@ -57,6 +57,10 @@ const dict = {
         'card.task11.title': 'الساعة التفاعلية',
         'card.task11.desc': 'تعلم كيفية إنشاء ساعة تفاعلية مع إمكانيات التحكم باستخدام JavaScript.',
 
+        // task12
+        'card.task12.title': 'ساحة اللعب الخلفية',
+        'card.task12.desc': 'تعلم كيفية تغيير لون الخلفية باستخدام جافا سكريبت والتخزين المحلي.',
+
         'card.viewApp': 'عرض التطبيق',
 
         'nav.taskPrefix': 'تطبيق',
@@ -149,7 +153,15 @@ const dict = {
         "task11.timePlaceholder": "12:00:00 PM",
         "task11.start": "ابدأ الساعة",
         "task11.stop": "أوقف الساعة",
-        "task11.goToLink": "اذهب إلى رابط"
+        "task11.goToLink": "اذهب إلى رابط",
+
+        // task12
+        "task12.title": "مُحدد ألوان الخلفية",
+        "task12.red": "أحمر",
+        "task12.yellow": "أصفر",
+        "task12.green": "أخضر",
+        "task12.reset": "إعادة الضبط",
+        "task12.footer": "استمتع بتجربة تغيير الألوان! 😊"
     },
     en: {
         'app.title': 'JavaScript Applications',
@@ -198,6 +210,11 @@ const dict = {
         //task 11
         'card.task11.title': 'Interactive Clock',
         'card.task11.desc': 'Learn how to create an interactive clock with control capabilities using JavaScript.',
+
+
+        // task12
+        'card.task12.title': 'Background PlayGround',
+        'card.task12.desc': 'Learn how to change backgroundColor using JS and LocalStorage.',
 
         'card.viewApp': 'View App',
 
@@ -291,7 +308,15 @@ const dict = {
         "task11.timePlaceholder": "12:00:00 PM",
         "task11.start": "Start the clock",
         "task11.stop": "Stop the clock",
-        "task11.goToLink": "Go to link"
+        "task11.goToLink": "Go to link",
+
+        // task12
+        "task12.title": "Background Color Selector",
+        "task12.red": "Red",
+        "task12.yellow": "Yellow",
+        "task12.green": "Green",
+        "task12.reset": "Reset",
+        "task12.footer": "Enjoy the color change experience! 😊"
     },
 };
 
