@@ -65,15 +65,6 @@ export const styles = `
         opacity: .9;
     }
 
-    #message {
-        margin-top: 40px;
-        text-align: center;
-        color: white;
-        display: none;
-        font-size: 38px;
-        font-weight: 700;
-    }
-
     .users-table {
     width: 100%;
     margin-top: 40px;
@@ -105,6 +96,18 @@ export const styles = `
 .users-table tbody tr:hover {
     background: rgba(255,255,255,.1);
       cursor: pointer;
+}
+
+.deleteBtn{
+    padding: 12px;
+        color: #ffffff;
+        border: none;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: opacity 0.2s;
+        background-color: #e67e22;
 }
 `;
 
@@ -154,8 +157,6 @@ export function render() {
 
     </form>
 
-    <h1 id="message"></h1>
-
     <div id="users-table"></div>
 
 </div>
@@ -167,7 +168,6 @@ export function init() {
     const nameInput = document.getElementById("userName");
     const ageInput = document.getElementById("userAge");
     const emailInput = document.getElementById("userEmail");
-    const message = document.getElementById("message");
     const tableContainer = document.getElementById("users-table");
 
     tableContainer.innerHTML = `
@@ -177,6 +177,7 @@ export function init() {
                     <th>Name</th>
                     <th>Age</th>
                     <th>Email</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody id="usersBody"></tbody>
@@ -193,21 +194,25 @@ export function init() {
         const age = ageInput.value.trim();
         const email = emailInput.value.trim();
 
-        const generatedMessage = `Hello ${name}`;
 
-        message.textContent = generatedMessage;
-        message.style.display = "block";
+        const deleteBtn = document.createElement('button');
+        deleteBtn.classList.add('deleteBtn');
+        deleteBtn.textContent = 'Delete';
+        // console.log(deleteBtn)
 
         // create row
         const row = document.createElement("tr");
 
         row.innerHTML = `
-            <td>${name}</td>
-            <td>${age}</td>
-            <td>${email}</td>
+        <td>${name}</td>
+        <td>${age}</td>
+        <td>${email}</td>
+        <td id="action-cell"></td>
         `;
 
+        row.querySelector('td:last-child').appendChild(deleteBtn);
         usersBody.appendChild(row);
+        deleteBtn.addEventListener('click', () => row.remove())
         form.reset();
         nameInput.focus();
     }
