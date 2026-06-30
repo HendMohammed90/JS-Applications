@@ -212,11 +212,11 @@ export function render() {
 
 export function init() {
     let products = [
-        { nameKey: 'task5.product.headphones', price: 150, icon: 'fa-headphones', startsWithAr: 'س', startsWithEn: 'h' },
-        { nameKey: 'task5.product.backpack', price: 350, icon: 'fa-briefcase', startsWithAr: 'ح', startsWithEn: 'b' },
-        { nameKey: 'task5.product.watch', price: 250, icon: 'fa-clock', startsWithAr: 'س', startsWithEn: 'w' },
-        { nameKey: 'task5.product.notebook', price: 80, icon: 'fa-book', startsWithAr: 'د', startsWithEn: 'n' },
-        { nameKey: 'task5.product.bottle', price: 60, icon: 'fa-tint', startsWithAr: 'ز', startsWithEn: 'b' },
+        { nameKey: 'task5.product.headphones', price: 150, priceHistory: [], icon: 'fa-headphones', startsWithAr: 'س', startsWithEn: 'h' },
+        { nameKey: 'task5.product.backpack', price: 350, priceHistory: [], icon: 'fa-briefcase', startsWithAr: 'ح', startsWithEn: 'b' },
+        { nameKey: 'task5.product.watch', price: 250, priceHistory: [], icon: 'fa-clock', startsWithAr: 'س', startsWithEn: 'w' },
+        { nameKey: 'task5.product.notebook', price: 80, priceHistory: [], icon: 'fa-book', startsWithAr: 'د', startsWithEn: 'n' },
+        { nameKey: 'task5.product.bottle', price: 60, priceHistory: [], icon: 'fa-tint', startsWithAr: 'ز', startsWithEn: 'b' },
     ];
 
     const productsContainer = document.getElementById('productsContainer');
@@ -296,10 +296,12 @@ export function init() {
         products = products.filter(product => product !== item);
         renderProducts(products);
     }
-    
+
     function handleEdit(item) {
+
+        //  TODO:saving the old price in a separate variable
         const overlay = createElementFunc('div', 'modal-overlay');
-        // TODO: Open edit modal or form here.
+        // console.log(`the old price ${item.price}`)
         // console.log('Edit:', item);
         const priceInput = createElementFunc('input', 'modal-input');
         priceInput.value = item.price;
@@ -313,11 +315,15 @@ export function init() {
         saveBtn.addEventListener('click', () => {
             // console.log(priceInput.value);
             // validation
+            let oldPrice = item.price;
             const newPrice = Number(priceInput.value);
             if (!newPrice || newPrice <= 0) return;
+            item.priceHistory = item.priceHistory;
+            item.priceHistory.push(oldPrice);
             item.price = newPrice;
-            products = products.map(product => product === item ? { ...product, ...item } : product);
+            // products = products.map(product => product === item ? { ...product, ...item } : product);
             renderProducts(products);
+            // console.log(`the products result ${JSON.stringify(products)}`)
             overlay.remove();
         });
         const modal = createElementFunc('div', 'modal-content',
