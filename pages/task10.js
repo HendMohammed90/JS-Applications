@@ -164,55 +164,86 @@ export function render() {
 }
 export function init() {
 
+    // Add localStorage after localStorage lesson
+
     const form = document.getElementById("userForm");
     const nameInput = document.getElementById("userName");
     const ageInput = document.getElementById("userAge");
     const emailInput = document.getElementById("userEmail");
     const tableContainer = document.getElementById("users-table");
+    const USERS_KEY = "usersData";
 
     tableContainer.innerHTML = `
-        <table class="users-table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="usersBody"></tbody>
-        </table>
+    <table class="users-table">
+    <thead>
+    <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="usersBody">
+    </tbody>
+    </table>
     `;
 
-    const usersBody = document.getElementById("usersBody");
-
-    function handleSubmit(e) {
-
-        e.preventDefault();
-
-        const name = nameInput.value.trim();
-        const age = ageInput.value.trim();
-        const email = emailInput.value.trim();
-
-
+    function createUserRow(userData) {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+        <td>${userData.user}</td>
+        <td>${userData.age}</td>
+        <td>${userData.email}</td>
+        <td class="action-cell"></td>
+    `;
         const deleteBtn = document.createElement('button');
         deleteBtn.classList.add('deleteBtn');
         deleteBtn.textContent = 'Delete';
-        // console.log(deleteBtn)
+        deleteBtn.addEventListener('click', () => {
+            const storedUsers = JSON.parse(localStorage.getItem(USERS_KEY) || '[]');
+            const updated = storedUsers.filter(u => u.user !== userData.user);
+            localStorage.setItem(USERS_KEY, JSON.stringify(updated));
 
-        // create row
-        const row = document.createElement("tr");
+            row.remove();
+        });
+        row.querySelector('.action-cell').appendChild(deleteBtn);
+        // console.log(row)
+        return row;
+    }
 
-        row.innerHTML = `
-        <td>${name}</td>
-        <td>${age}</td>
-        <td>${email}</td>
-        <td id="action-cell"></td>
-        `;
+    // Fill the table data from saved localStorage
+    const users = JSON.parse(localStorage.getItem(USERS_KEY) || '[]');
+    // console.log(users)
+    const usersBody = document.getElementById("usersBody");
+    users.forEach(element => {
+        // console.log(element)
+        usersBody.appendChild(createUserRow(element));
 
-        row.querySelector('td:last-child').appendChild(deleteBtn);
+    });
+
+
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        const name = nameInput.value.trim();
+        const age = ageInput.value.trim();
+        const email = emailInput.value.trim();
+        let userData = {
+            user: name,
+            age: age,
+            email: email
+        }
+        const row = createUserRow(userData)
+
+        // read
+        const existingUsers = JSON.parse(localStorage.getItem(USERS_KEY) || '[]');
+        // push
+        existingUsers.push(userData)
+        //new save
+        localStorage.setItem(USERS_KEY, JSON.stringify(existingUsers));
+        // console.log(userData)
+
         usersBody.appendChild(row);
-        deleteBtn.addEventListener('click', () => row.remove())
         form.reset();
         nameInput.focus();
     }
