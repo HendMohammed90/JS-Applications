@@ -99,6 +99,7 @@ export function init() {
 
     function handleStartClock() {
         if (intervalId) return;
+        //nodeJs and express
         intervalId = setInterval(() => {
             // update the display
             const now = new Date();

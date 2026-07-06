@@ -91,16 +91,15 @@ export function init() {
     const yellowBtn = document.getElementById('yellowBtn');
     const greenBtn = document.getElementById('greenBtn');
     const resetBtn = document.getElementById('resetBtn');
-    const container = document.getElementById('productsContainer');
-    let localVariableStorage
+    // let localVariableStorage
     const body = document.body
-    console.log(body)
-    let backgroundColor = ''
+    // console.log(body)
+    // let backgroundColor = ''
 
     function handleColorChange(color) {
-        backgroundColor = 'the color'
+        // backgroundColor = 'the color'
         body.style.backgroundColor = color;
-        localVariableStorage = localStorage.setItem(backgroundColor, color);
+        // localVariableStorage = localStorage.setItem(backgroundColor, color);
     }
 
     function handleColorReset() {
