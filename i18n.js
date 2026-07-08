@@ -61,6 +61,10 @@ const dict = {
         'card.task12.title': 'ساحة اللعب الخلفية',
         'card.task12.desc': 'تعلم كيفية تغيير لون الخلفية باستخدام جافا سكريبت والتخزين المحلي.',
 
+        // task13
+        'card.task13.title': 'عرض الملف الشخصي',
+        'card.task13.desc': 'تعلم كيفيه عرض المعلومات بطريقة مميزة',
+
         'card.viewApp': 'عرض التطبيق',
 
         'nav.taskPrefix': 'تطبيق',
@@ -161,7 +165,24 @@ const dict = {
         "task12.yellow": "أصفر",
         "task12.green": "أخضر",
         "task12.reset": "إعادة الضبط",
-        "task12.footer": "استمتع بتجربة تغيير الألوان! 😊"
+        "task12.footer": "استمتع بتجربة تغيير الألوان! 😊",
+
+        //task13
+        "task13.title": "عرض تطبيقي",
+        "task13.nameLabel": "الاسم:",
+        "task13.nameValue": "اسامة زينهم",
+        "task13.ageLabel": "العمر:",
+        "task13.ageValue": "30",
+        "task13.jobLabel": "الوظيفة:",
+        "task13.jobValue": "مهندس برمجيات",
+        "task13.cityLabel": "المدينة:",
+        "task13.cityValue": "المنيا",
+        "task13.zipLabel": "الرمز البريدي:",
+        "task13.zipValue": "12345",
+        "task13.langLabel": "اللغة:",
+        "task13.langValue": "العربية",
+        "task13.showWelcome": "عرض رسالة ترحيب"
+
     },
     en: {
         'app.title': 'JavaScript Applications',
@@ -215,6 +236,10 @@ const dict = {
         // task12
         'card.task12.title': 'Background PlayGround',
         'card.task12.desc': 'Learn how to change backgroundColor using JS and LocalStorage.',
+
+        // task13
+        'card.task13.title': 'View Profile',
+        'card.task13.desc': 'Learn how to present information in a unique way',
 
         'card.viewApp': 'View App',
 
@@ -316,7 +341,25 @@ const dict = {
         "task12.yellow": "Yellow",
         "task12.green": "Green",
         "task12.reset": "Reset",
-        "task12.footer": "Enjoy the color change experience! 😊"
+        "task12.footer": "Enjoy the color change experience! 😊",
+
+        //task13
+
+        "task13.title": "My Application",
+        "task13.nameLabel": "Name:",
+        "task13.nameValue": "Osama Zeinhom",
+        "task13.ageLabel": "Age:",
+        "task13.ageValue": "30",
+        "task13.jobLabel": "Job:",
+        "task13.jobValue": "Software Engineer",
+        "task13.cityLabel": "City:",
+        "task13.cityValue": "Minya",
+        "task13.zipLabel": "Postal Code:",
+        "task13.zipValue": "12345",
+        "task13.langLabel": "Language:",
+        "task13.langValue": "Arabic",
+        "task13.showWelcome": "Displays a welcome message"
+
     },
 };
 

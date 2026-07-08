@@ -26,6 +26,7 @@ const featuredCards = [
     { taskId: 'task10', icon: 'fa-solid fa-users', titleKey: 'card.task10.title', descKey: 'card.task10.desc' },
     { taskId: 'task11', icon: 'fa-solid fa-clock', titleKey: 'card.task11.title', descKey: 'card.task11.desc' },
     { taskId: 'task12', icon: 'fa-solid fa-brush', titleKey: 'card.task12.title', descKey: 'card.task12.desc' },
+    { taskId: 'task13', icon: 'fa-solid fa-user', titleKey: 'card.task13.title', descKey: 'card.task13.desc' },
 
 ];
 
