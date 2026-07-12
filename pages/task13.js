@@ -134,24 +134,26 @@ export function init() {
 
     const person = {
         name: "HE Mo",
-        age:  30,
+        age: 30,
         job: "Software Developer",
         address: { cityVal: "Giza", zipVal: "12345" },
-        language: "Arabic"
+        language: "English"
     };
 
-    const {
-        name: nameVal = 'HEND',
-        age: ageVal = 30,
-        job = 'Freelancer',
-        address: { cityVal = "Giza", zipVal = "123456" } = {},
-        language = 'Arabic'
-    } = person;
+    let { name, age, job, address: { cityVal, zipVal }, language } = person;
+
+
+    name = 'HEND';
+    age = 31;
+    job = 'Freelancer'
+    cityVal = "6th of October";
+    zipVal = "123456";
+    language = 'Arabic'
 
 
     function displayPersonData() {
-        nameEl.textContent = nameVal;
-        ageEl.textContent = ageVal;
+        nameEl.textContent = name;
+        ageEl.textContent = age;
         jobEl.textContent = job;
         cityEl.textContent = cityVal;
         zipEl.textContent = zipVal;
@@ -162,7 +164,7 @@ export function init() {
 
 
     function handleShowMessage(event) {
-        alert(`Hello ${nameVal}! Age: ${ageVal}, Job: ${job}, City: ${cityVal}`);
+        alert(`Hello ${name}! Age: ${age}, Job: ${job}, City: ${cityVal}`);
     }
 
     showBtn?.addEventListener('click', handleShowMessage);
