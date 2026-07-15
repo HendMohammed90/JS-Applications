@@ -65,6 +65,10 @@ const dict = {
         'card.task13.title': 'عرض الملف الشخصي',
         'card.task13.desc': 'تعلم كيفيه عرض المعلومات بطريقة مميزة',
 
+        // task14
+        'card.task14.title': 'Set & Map',
+        'card.task14.desc': 'تعلم كيفية استخدام Sets and Maps في جافا سكريبت',
+
         'card.viewApp': 'عرض التطبيق',
 
         'nav.taskPrefix': 'تطبيق',
@@ -181,7 +185,27 @@ const dict = {
         "task13.zipValue": "12345",
         "task13.langLabel": "اللغة:",
         "task13.langValue": "العربية",
-        "task13.showWelcome": "عرض رسالة ترحيب"
+        "task13.showWelcome": "عرض رسالة ترحيب",
+
+        //task14
+        // "task14.title": "عرض تطبيقي",
+        // "task14.usersTitle": "المستخدمون:",
+        // "task14.productsTitle": "المنتجات:",
+        // "task14.user1": "Osama",
+        // "task14.user2": "Ahmed",
+        // "task14.user3": "Reda",
+        // "task14.product1Name": "Laptop",
+        // "task14.product1Details": "السعر 15000 جنيه، الكمية 3",
+        // "task14.product2Name": "Phone",
+        // "task14.product2Details": "السعر 8000 جنيه، الكمية 5",
+        "task14.title": "متابع المنتجات (Product Tracker)",
+        "task14.productNamePlaceholder": "اسم المنتج",
+        "task14.productPricePlaceholder": "السعر",
+        "task14.add": "إضافة منتج",
+        "task14.check": "التحقق من وجوده",
+        "task14.totalCost": "إجمالي التكلفة:",
+        "task14.productListTitle": "قائمة المنتجات المتوفرة:",
+        "task14.currency": "جنيه"
 
     },
     en: {
@@ -240,6 +264,10 @@ const dict = {
         // task13
         'card.task13.title': 'View Profile',
         'card.task13.desc': 'Learn how to present information in a unique way',
+
+        // task14
+        'card.task14.title': 'Set and Map',
+        'card.task14.desc': 'Learn how to working with Sets and Maps in javascript',
 
         'card.viewApp': 'View App',
 
@@ -358,7 +386,28 @@ const dict = {
         "task13.zipValue": "12345",
         "task13.langLabel": "Language:",
         "task13.langValue": "Arabic",
-        "task13.showWelcome": "Displays a welcome message"
+        "task13.showWelcome": "Displays a welcome message",
+
+
+        // task14
+        // "task14.title": "My Application",
+        // "task14.usersTitle": "Users:",
+        // "task14.productsTitle": "Products:",
+        // "task14.user1": "Osama",
+        // "task14.user2": "Ahmed",
+        // "task14.user3": "Reda",
+        // "task14.product1Name": "Laptop",
+        // "task14.product1Details": "Price 15,000 EGP, Quantity 3",
+        // "task14.product2Name": "Phone",
+        // "task14.product2Details": "Price 8,000 EGP, Quantity 5"
+        "task14.title": "Product Tracker",
+        "task14.productNamePlaceholder": "Product Name",
+        "task14.productPricePlaceholder": "Price",
+        "task14.add": "Add Product",
+        "task14.check": "Check Existence",
+        "task14.totalCost": "Total Cost:",
+        "task14.productListTitle": "List of Available Products:",
+        "task14.currency": "Pound"
 
     },
 };
