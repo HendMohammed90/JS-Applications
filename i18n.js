@@ -69,6 +69,11 @@ const dict = {
         'card.task14.title': 'Set & Map',
         'card.task14.desc': 'تعلم كيفية استخدام Sets and Maps في جافا سكريبت',
 
+        // task15
+        'card.task15.title': 'أداة التحقق من صحة النموذج',
+        'card.task15.desc': 'هذه الأداة تعمل كأداة أساسية للتحقق من صحة النموذج',
+
+
         'card.viewApp': 'عرض التطبيق',
 
         'nav.taskPrefix': 'تطبيق',
@@ -188,16 +193,6 @@ const dict = {
         "task13.showWelcome": "عرض رسالة ترحيب",
 
         //task14
-        // "task14.title": "عرض تطبيقي",
-        // "task14.usersTitle": "المستخدمون:",
-        // "task14.productsTitle": "المنتجات:",
-        // "task14.user1": "Osama",
-        // "task14.user2": "Ahmed",
-        // "task14.user3": "Reda",
-        // "task14.product1Name": "Laptop",
-        // "task14.product1Details": "السعر 15000 جنيه، الكمية 3",
-        // "task14.product2Name": "Phone",
-        // "task14.product2Details": "السعر 8000 جنيه، الكمية 5",
         "task14.title": "متابع المنتجات (Product Tracker)",
         "task14.productNamePlaceholder": "اسم المنتج",
         "task14.productPricePlaceholder": "السعر",
@@ -205,7 +200,20 @@ const dict = {
         "task14.check": "التحقق من وجوده",
         "task14.totalCost": "إجمالي التكلفة:",
         "task14.productListTitle": "قائمة المنتجات المتوفرة:",
-        "task14.currency": "جنيه"
+        "task14.currency": "جنيه",
+
+        // task15
+        "task16.title": "أداة التحقق من البيانات (Form Validation)",
+        "task16.userNamePlaceholder": "الاسم (من 3 إلى 10 أحرف دون رموز خاصة)",
+        "task16.userEmailPlaceholder": "البريد الإلكتروني (مثال: name@domain.com)",
+        "task16.userPhonePlaceholder": "رقم الهاتف (10 أرقام بالضبط)",
+        "task16.submit": "التحقق من البيانات",
+        "task16.successMessage": "تهانينا! تم التحقق من جميع البيانات بنجاح.",
+        "task16.nameError": "الاسم غير صالح! يجب أن يتراوح طوله بين 3 إلى 10 أحرف وبدون رموز خاصة.",
+        "task16.emailError": "البريد الإلكتروني غير صالح! يرجى إدخال صيغة بريد صحيحة.",
+        "task16.phoneError": "رقم الهاتف غير صالح! يجب أن يتكون من 10 أرقام بالضبط.",
+        "task16.formErrorMessage": "يرجى تصحيح الحقول المميزة."
+
 
     },
     en: {
@@ -268,6 +276,11 @@ const dict = {
         // task14
         'card.task14.title': 'Set and Map',
         'card.task14.desc': 'Learn how to working with Sets and Maps in javascript',
+
+        // task15
+        'card.task15.title': 'Form Validator tool',
+        'card.task15.desc': 'This acts like a basic form validation tool',
+
 
         'card.viewApp': 'View App',
 
@@ -388,18 +401,7 @@ const dict = {
         "task13.langValue": "Arabic",
         "task13.showWelcome": "Displays a welcome message",
 
-
         // task14
-        // "task14.title": "My Application",
-        // "task14.usersTitle": "Users:",
-        // "task14.productsTitle": "Products:",
-        // "task14.user1": "Osama",
-        // "task14.user2": "Ahmed",
-        // "task14.user3": "Reda",
-        // "task14.product1Name": "Laptop",
-        // "task14.product1Details": "Price 15,000 EGP, Quantity 3",
-        // "task14.product2Name": "Phone",
-        // "task14.product2Details": "Price 8,000 EGP, Quantity 5"
         "task14.title": "Product Tracker",
         "task14.productNamePlaceholder": "Product Name",
         "task14.productPricePlaceholder": "Price",
@@ -407,8 +409,19 @@ const dict = {
         "task14.check": "Check Existence",
         "task14.totalCost": "Total Cost:",
         "task14.productListTitle": "List of Available Products:",
-        "task14.currency": "Pound"
+        "task14.currency": "Pound",
 
+        // task15
+        "task16.title": "Form Validation Tool",
+        "task16.userNamePlaceholder": "Name (3-10 characters without special characters)",
+        "task16.userEmailPlaceholder": "Email (example: name@domain.com)",
+        "task16.userPhonePlaceholder": "Phone number (exactly 10 digits)",
+        "task16.submit": "Data Verification",
+        "task16.successMessage": "Congratulations! All data has been verified successfully.",
+        "task16.nameError": "The name is invalid! It must be 3 to 10 characters long and no special characters.",
+        "task16.emailError": "The email is invalid! Please enter a valid email format.",
+        "task16.phoneError": "Invalid phone number! Must be exactly 10 digits long.",
+        "task16.formErrorMessage": "Please correct the highlighted fields."
     },
 };
 
