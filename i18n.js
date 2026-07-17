@@ -73,6 +73,9 @@ const dict = {
         'card.task15.title': 'أداة التحقق من صحة النموذج',
         'card.task15.desc': 'هذه الأداة تعمل كأداة أساسية للتحقق من صحة النموذج',
 
+        //task16
+        'card.task16.title': 'مدقق نموذج تسجيل الدخول',
+        'card.task16.desc': 'هذا يعمل كسيناريو للتحقق من صحة نموذج تسجيل الدخول',
 
         'card.viewApp': 'عرض التطبيق',
 
@@ -203,16 +206,25 @@ const dict = {
         "task14.currency": "جنيه",
 
         // task15
-        "task16.title": "أداة التحقق من البيانات (Form Validation)",
-        "task16.userNamePlaceholder": "الاسم (من 3 إلى 10 أحرف دون رموز خاصة)",
-        "task16.userEmailPlaceholder": "البريد الإلكتروني (مثال: name@domain.com)",
-        "task16.userPhonePlaceholder": "رقم الهاتف (10 أرقام بالضبط)",
-        "task16.submit": "التحقق من البيانات",
-        "task16.successMessage": "تهانينا! تم التحقق من جميع البيانات بنجاح.",
-        "task16.nameError": "الاسم غير صالح! يجب أن يتراوح طوله بين 3 إلى 10 أحرف وبدون رموز خاصة.",
-        "task16.emailError": "البريد الإلكتروني غير صالح! يرجى إدخال صيغة بريد صحيحة.",
-        "task16.phoneError": "رقم الهاتف غير صالح! يجب أن يتكون من 10 أرقام بالضبط.",
-        "task16.formErrorMessage": "يرجى تصحيح الحقول المميزة."
+        "task15.title": "أداة التحقق من البيانات (Form Validation)",
+        "task15.userNamePlaceholder": "الاسم (من 3 إلى 10 أحرف دون رموز خاصة)",
+        "task15.userEmailPlaceholder": "البريد الإلكتروني (مثال: name@domain.com)",
+        "task15.userPhonePlaceholder": "رقم الهاتف (10 أرقام بالضبط)",
+        "task15.submit": "التحقق من البيانات",
+        "task15.successMessage": "تهانينا! تم التحقق من جميع البيانات بنجاح.",
+        "task15.nameError": "الاسم غير صالح! يجب أن يتراوح طوله بين 3 إلى 10 أحرف وبدون رموز خاصة.",
+        "task15.emailError": "البريد الإلكتروني غير صالح! يرجى إدخال صيغة بريد صحيحة.",
+        "task15.phoneError": "رقم الهاتف غير صالح! يجب أن يتكون من 10 أرقام بالضبط.",
+        "task15.formErrorMessage": "يرجى تصحيح الحقول المميزة.",
+
+        //task16
+        "task16.title": "تسجيل الدخول والتحقق من البيانات",
+        "task16.usernamePlaceholder": "اسم المستخدم (يبدأ بحرف، من 5 إلى 15 حرفاً)",
+        "task16.passwordPlaceholder": "كلمة المرور (من 8 إلى 20 حرفاً، تحتوي على حرف كبير ورقم)",
+        "task16.submit": "تسجيل الدخول",
+        "task16.usernameError": "اسم المستخدم غير صالح! يجب أن يبدأ بحرف ويتراوح بين 5 إلى 15 حرفاً.",
+        "task16.passwordError": "كلمة المرور غير صالحة! يجب أن تكون بين 8 إلى 20 حرفاً وتحتوي على حرف كبير واحد ورقم واحد على الأقل.",
+        "task16.successMessage": "تم التحقق من البيانات المدخلة بنجاح! جاري تسجيل الدخول..."
 
 
     },
@@ -281,6 +293,9 @@ const dict = {
         'card.task15.title': 'Form Validator tool',
         'card.task15.desc': 'This acts like a basic form validation tool',
 
+        //task16
+        'card.task16.title': 'Login Form Validator',
+        'card.task16.desc': 'This acts like a login form validation senario',
 
         'card.viewApp': 'View App',
 
@@ -412,16 +427,25 @@ const dict = {
         "task14.currency": "Pound",
 
         // task15
-        "task16.title": "Form Validation Tool",
-        "task16.userNamePlaceholder": "Name (3-10 characters without special characters)",
-        "task16.userEmailPlaceholder": "Email (example: name@domain.com)",
-        "task16.userPhonePlaceholder": "Phone number (exactly 10 digits)",
-        "task16.submit": "Data Verification",
-        "task16.successMessage": "Congratulations! All data has been verified successfully.",
-        "task16.nameError": "The name is invalid! It must be 3 to 10 characters long and no special characters.",
-        "task16.emailError": "The email is invalid! Please enter a valid email format.",
-        "task16.phoneError": "Invalid phone number! Must be exactly 10 digits long.",
-        "task16.formErrorMessage": "Please correct the highlighted fields."
+        "task15.title": "Form Validation Tool",
+        "task15.userNamePlaceholder": "Name (3-10 characters without special characters)",
+        "task15.userEmailPlaceholder": "Email (example: name@domain.com)",
+        "task15.userPhonePlaceholder": "Phone number (exactly 10 digits)",
+        "task15.submit": "Data Verification",
+        "task15.successMessage": "Congratulations! All data has been verified successfully.",
+        "task15.nameError": "The name is invalid! It must be 3 to 10 characters long and no special characters.",
+        "task15.emailError": "The email is invalid! Please enter a valid email format.",
+        "task15.phoneError": "Invalid phone number! Must be exactly 10 digits long.",
+        "task15.formErrorMessage": "Please correct the highlighted fields.",
+
+        // task16
+        "task16.title": "Login and data verification",
+        "task16.usernamePlaceholder": "Username (starts with a letter, 5 to 15 characters)",
+        "task16.passwordPlaceholder": "Password (8 to 20 characters, contains at least one capital letter and one number)",
+        "task16.submit": "Login",
+        "task16.usernameError": "Invalid username! Must start with a letter and be between 5 and 15 characters.",
+        "task16.passwordError": "Invalid password! Must be between 8 and 20 characters and contain at least one capital letter and one number.",
+        "task16.successMessage": "Data verified successfully! Logging in..."
     },
 };
 

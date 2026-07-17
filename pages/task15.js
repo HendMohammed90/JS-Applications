@@ -109,7 +109,7 @@ export const styles = `
 export function render() {
     return `
         <div class="validation-container">
-            <h1 class="validation-title">${t('task16.title')}</h1>
+            <h1 class="validation-title">${t('task15.title')}</h1>
 
             <form id="userForm" novalidate>
                 <div class="form-group">
@@ -117,10 +117,10 @@ export function render() {
                         type="text"
                         id="userName"
                         class="form-input"
-                        placeholder="${t('task16.userNamePlaceholder')}"
+                        placeholder="${t('task15.userNamePlaceholder')}"
                         required
                     />
-                    <div id="nameError" class="error-hint">${t('task16.nameError')}</div>
+                    <div id="nameError" class="error-hint">${t('task15.nameError')}</div>
                 </div>
 
                 <div class="form-group">
@@ -128,10 +128,10 @@ export function render() {
                         type="email"
                         id="userEmail"
                         class="form-input"
-                        placeholder="${t('task16.userEmailPlaceholder')}"
+                        placeholder="${t('task15.userEmailPlaceholder')}"
                         required
                     />
-                    <div id="emailError" class="error-hint">${t('task16.emailError')}</div>
+                    <div id="emailError" class="error-hint">${t('task15.emailError')}</div>
                 </div>
 
                 <div class="form-group">
@@ -139,14 +139,14 @@ export function render() {
                         type="tel"
                         id="userPhone"
                         class="form-input"
-                        placeholder="${t('task16.userPhonePlaceholder')}"
+                        placeholder="${t('task15.userPhonePlaceholder')}"
                         required
                     />
-                    <div id="phoneError" class="error-hint">${t('task16.phoneError')}</div>
+                    <div id="phoneError" class="error-hint">${t('task15.phoneError')}</div>
                 </div>
 
                 <button type="submit" id="submitBtn" class="submit-btn">
-                    ${t('task16.submit')}
+                    ${t('task15.submit')}
                 </button>
             </form>
 
@@ -243,8 +243,8 @@ export function init() {
             messageContainer.textContent = "Form submitted successfully!";
             messageContainer.className = "feedback-message success";
         } else {
-            // messageContainer.textContent = `t${task16.formErrorMessage}`;
-            messageContainer.textContent = t('task16.formErrorMessage');
+            // messageContainer.textContent = `t${task15.formErrorMessage}`;
+            messageContainer.textContent = t('task15.formErrorMessage');
             messageContainer.className = "feedback-message error";
         }
 
