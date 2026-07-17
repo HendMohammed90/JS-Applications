@@ -77,6 +77,12 @@ const dict = {
         'card.task16.title': 'مدقق نموذج تسجيل الدخول',
         'card.task16.desc': 'هذا يعمل كسيناريو للتحقق من صحة نموذج تسجيل الدخول',
 
+
+        //task17
+        'card.task17.title': 'دالة البناء',
+        'card.task17.desc': 'تعرّف على كيفية إنشاء الكائنات من دالة البناء',
+
+
         'card.viewApp': 'عرض التطبيق',
 
         'nav.taskPrefix': 'تطبيق',
@@ -224,8 +230,23 @@ const dict = {
         "task16.submit": "تسجيل الدخول",
         "task16.usernameError": "اسم المستخدم غير صالح! يجب أن يبدأ بحرف ويتراوح بين 5 إلى 15 حرفاً.",
         "task16.passwordError": "كلمة المرور غير صالحة! يجب أن تكون بين 8 إلى 20 حرفاً وتحتوي على حرف كبير واحد ورقم واحد على الأقل.",
-        "task16.successMessage": "تم التحقق من البيانات المدخلة بنجاح! جاري تسجيل الدخول..."
+        "task16.successMessage": "تم التحقق من البيانات المدخلة بنجاح! جاري تسجيل الدخول...",
 
+        // task17
+        "task17.title": "عرض تقديمي لتطبيقي",
+        "task17.hello": "مرحباً",
+        // "task17.name": "",
+        "task17.youAre": "أنت عمرك هو",
+        // "task17.years": "", "",
+        "task17.yourEmail": " وعنوان بريدك الإلكتروني ",
+        // "task17.email": "", "",
+        "task17.changeName": "تغيير الاسم",
+        "task17.user1Name": "احمد",
+        "task17.user2Name": "سارة",
+        "task17.user1Age": "٣٠",
+        "task17.user2Age": "٢٠",
+        "task17.user1Email": "ahmed@gmail.com",
+        "task17.user2Email": "sara@gmail.com",
 
     },
     en: {
@@ -296,6 +317,10 @@ const dict = {
         //task16
         'card.task16.title': 'Login Form Validator',
         'card.task16.desc': 'This acts like a login form validation senario',
+
+        //task17
+        'card.task17.title': 'Constractor function',
+        'card.task17.desc': 'Learn about creating opjects from Constractor function',
 
         'card.viewApp': 'View App',
 
@@ -445,7 +470,23 @@ const dict = {
         "task16.submit": "Login",
         "task16.usernameError": "Invalid username! Must start with a letter and be between 5 and 15 characters.",
         "task16.passwordError": "Invalid password! Must be between 8 and 20 characters and contain at least one capital letter and one number.",
-        "task16.successMessage": "Data verified successfully! Logging in..."
+        "task16.successMessage": "Data verified successfully! Logging in...",
+
+        // task17
+        "task17.title": "My application presentation",
+        "task17.hello": "Hello",
+        // "task17.name": "",
+        "task17.youAre": "You are",
+        // "task17.years": "",
+        "task17.yourEmail": "years old, and your email address is",
+        // "task17.email": "",
+        "task17.changeName": "Change Name",
+        "task17.user1Name": "Ahmed",
+        "task17.user2Name": "Sara",
+        "task17.user1Age": "30",
+        "task17.user2Age": "20",
+        "task17.user1Email": "ahmed@gmail.com",
+        "task17.user2Email": "sara@gmail.com",
     },
 };
 

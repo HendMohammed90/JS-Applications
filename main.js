@@ -30,7 +30,7 @@ const featuredCards = [
     { taskId: 'task14', icon: 'fa-solid fa-map', titleKey: 'card.task14.title', descKey: 'card.task14.desc' },
     { taskId: 'task15', icon: 'fa-solid fa-check', titleKey: 'card.task15.title', descKey: 'card.task15.desc' },
     { taskId: 'task16', icon: 'fa-solid fa-right-to-bracket', titleKey: 'card.task16.title', descKey: 'card.task16.desc' },
-
+    { taskId: 'task17', icon: 'fa-solid fa-object-group', titleKey: 'card.task17.title', descKey: 'card.task17.desc' },
 ];
 
 // ── Render shell components ───────────────────────────────────
