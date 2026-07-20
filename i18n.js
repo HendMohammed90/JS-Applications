@@ -83,6 +83,11 @@ const dict = {
         'card.task17.desc': 'تعرّف على كيفية إنشاء الكائنات من دالة البناء',
 
 
+        //task18
+        'card.task18.title': 'نظام إدارة المكتبات',
+        'card.task18.desc': 'تعلم كيفية التعامل مع معلومات الكتب وعرضها باستخدام JavaScript، بالإضافة إلى بناء واجهة تفاعلية لعرض تفاصيل الكتب.',
+
+
         'card.viewApp': 'عرض التطبيق',
 
         'nav.taskPrefix': 'تطبيق',
@@ -248,6 +253,16 @@ const dict = {
         "task17.user1Email": "ahmed@gmail.com",
         "task17.user2Email": "sara@gmail.com",
 
+        // task18
+        "task18.title": "عرض تطبيقي",
+        "task18.startReading": "ابدأ القراءة",
+        "task18.totalSizeLabel": "إجمالي حجم ملفات الكتب الإلكترونية:",
+        "reading": "جاري القرآة...",
+        "finish": "انتهيت الحمد لله",
+        "book": "كتاب",
+        "by": "بواسطة",
+        "pages": "صفحة"
+
     },
     en: {
         'app.title': 'JavaScript Applications',
@@ -321,6 +336,11 @@ const dict = {
         //task17
         'card.task17.title': 'Constractor function',
         'card.task17.desc': 'Learn about creating opjects from Constractor function',
+
+        //task18
+        'card.task18.title': 'Library Management System',
+        'card.task18.desc': 'Learn how to handle and display book information using JavaScript, as well as build an interactive interface to display book details.',
+
 
         'card.viewApp': 'View App',
 
@@ -487,6 +507,17 @@ const dict = {
         "task17.user2Age": "20",
         "task17.user1Email": "ahmed@gmail.com",
         "task17.user2Email": "sara@gmail.com",
+
+        // task18
+        "task18.title": "View my application",
+        "task18.startReading": "Start Reading",
+        "task18.totalSizeLabel": "Total eBook file size:",
+        "reading": "Reading...",
+        "finish": "Done",
+        "by": "By",
+        "pages": "pages",
+        "book": "",
+
     },
 };
 
