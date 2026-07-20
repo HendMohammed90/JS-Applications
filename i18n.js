@@ -87,6 +87,9 @@ const dict = {
         'card.task18.title': 'نظام إدارة المكتبات',
         'card.task18.desc': 'تعلم كيفية التعامل مع معلومات الكتب وعرضها باستخدام JavaScript، بالإضافة إلى بناء واجهة تفاعلية لعرض تفاصيل الكتب.',
 
+        // task19
+        'card.task19.title': 'مؤقت العد التنازلي للحدث',
+        'card.task19.desc': 'تعرف على كيفية تنفيذ العد التنازلي للحدث باستخدام JavaScript، وإضافة بعض التأثيرات المتقدمة لتحسين تجربة المستخدم.',
 
         'card.viewApp': 'عرض التطبيق',
 
@@ -261,7 +264,12 @@ const dict = {
         "finish": "انتهيت الحمد لله",
         "book": "كتاب",
         "by": "بواسطة",
-        "pages": "صفحة"
+        "pages": "صفحة",
+
+        // task19
+        "task19.title": "عرض تطبيقي",
+        "task19.placeholder": "انقر على الزر لبدء العد التنازلي",
+        "task19.start": "ابدأ العد التنازلي"
 
     },
     en: {
@@ -340,6 +348,11 @@ const dict = {
         //task18
         'card.task18.title': 'Library Management System',
         'card.task18.desc': 'Learn how to handle and display book information using JavaScript, as well as build an interactive interface to display book details.',
+
+
+        // task19
+        'card.task19.title': 'Event Countdown Timer',
+        'card.task19.desc': 'Learn how to implement an Event countdown using JavaScript, adding some advanced effects to improve the user experience.',
 
 
         'card.viewApp': 'View App',
@@ -517,6 +530,11 @@ const dict = {
         "by": "By",
         "pages": "pages",
         "book": "",
+
+        // task19
+        "task19.title": "View my application",
+        "task19.placeholder": "Click the button to start the countdown",
+        "task19.start": "Start the countdown"
 
     },
 };
