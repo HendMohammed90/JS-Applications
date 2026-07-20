@@ -69,6 +69,24 @@ export function render() {
     return `
         <div class="countdown-container">
             <h1 class="countdown-title">${t('task19.title')}</h1>
+            <div style="margin-bottom:20px;">
+                <input id="targetDate" type="datetime-local"
+                style="
+                padding:30px;
+                width: 100%;
+                height: 60px;
+                border: none;
+                border-radius: 14px;
+                font-size: 18px;
+                font-weight: 700;
+                color: #ffffff;
+                cursor: pointer;
+                background: linear-gradient(135deg, #a5533a 0%, #c76b4f 100%);
+                box-shadow: 0 4px 15px rgba(165, 83, 58, 0.25);
+                transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+                "
+                />
+            </div>
 
             <!-- Output Display Container -->
             <div class="display-card">
@@ -81,6 +99,10 @@ export function render() {
             <button id="showBtn" class="start-btn">
                 ${t('task19.start')}
             </button>
+
+            <button id="resetBtn" class="start-btn" style="margin-top:10px;background:#666;">
+                Reset
+            </button>
         </div>
     `;
 }
@@ -88,14 +110,31 @@ export function render() {
 export function init() {
     const startCountdownBtn = document.getElementById('showBtn');
     const messageDisplay = document.getElementById('message');
-
-
+    const dateInput = document.getElementById("targetDate");
+    const resetBtn = document.getElementById("resetBtn");
+    const savedDate = localStorage.getItem("countdownDate");
+    if (savedDate) {
+        dateInput.value = savedDate;
+    }
     let timerInterval = null;
 
-    function handleShowMessage() {
 
-        const targetDate = new Date("Jul 20, 2026 12:07:00").getTime();
-        const timerInterval = setInterval(function () {
+    function handleShowMessage() {
+        if (!dateInput.value) {
+            messageDisplay.textContent = t("task19.please");
+            return;
+        }
+
+        localStorage.setItem("countdownDate", dateInput.value);
+
+        // const targetDate = new Date("Jul 20, 2026 12:07:00").getTime();
+        const targetDate = new Date(dateInput.value).getTime();
+
+        if (timerInterval) {
+            clearInterval(timerInterval);
+        }
+
+        timerInterval = setInterval(function () {
 
             // Get the current date and time in milliseconds
             const now = new Date().getTime();
@@ -129,12 +168,28 @@ export function init() {
 
     }
 
+
+    function handleReset() {
+        if (timerInterval) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+        }
+
+        dateInput.value = "";
+
+        messageDisplay.textContent = t("task19.placeholder");
+
+        localStorage.removeItem("countdownDate");
+    }
+
     startCountdownBtn?.addEventListener('click', handleShowMessage);
+    resetBtn?.addEventListener("click", handleReset);
 
     return function cleanup() {
         startCountdownBtn?.removeEventListener('click', handleShowMessage);
         if (timerInterval) {
             clearInterval(timerInterval);
         }
+        resetBtn.removeEventListener("click", handleReset);
     };
 }

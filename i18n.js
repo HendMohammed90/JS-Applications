@@ -269,7 +269,9 @@ const dict = {
         // task19
         "task19.title": "عرض تطبيقي",
         "task19.placeholder": "انقر على الزر لبدء العد التنازلي",
-        "task19.start": "ابدأ العد التنازلي"
+        "task19.start": "ابدأ العد التنازلي",
+        "task19.please": "من فضلك اختر الوقت المطلوب..."
+
 
     },
     en: {
@@ -534,7 +536,8 @@ const dict = {
         // task19
         "task19.title": "View my application",
         "task19.placeholder": "Click the button to start the countdown",
-        "task19.start": "Start the countdown"
+        "task19.start": "Start the countdown",
+        "task19.please": "Please select a target date"
 
     },
 };
