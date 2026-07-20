@@ -91,6 +91,10 @@ const dict = {
         'card.task19.title': 'مؤقت العد التنازلي للحدث',
         'card.task19.desc': 'تعرف على كيفية تنفيذ العد التنازلي للحدث باستخدام JavaScript، وإضافة بعض التأثيرات المتقدمة لتحسين تجربة المستخدم.',
 
+        // task20
+        'card.task20.title': 'إنشاء تطبيق',
+        'card.task20.desc': 'تعلم كيفية إنشاء رقم عشوائي جديد باستخدام جافا سكريبت.',
+
         'card.viewApp': 'عرض التطبيق',
 
         'nav.taskPrefix': 'تطبيق',
@@ -270,8 +274,12 @@ const dict = {
         "task19.title": "عرض تطبيقي",
         "task19.placeholder": "انقر على الزر لبدء العد التنازلي",
         "task19.start": "ابدأ العد التنازلي",
-        "task19.please": "من فضلك اختر الوقت المطلوب..."
+        "task19.please": "من فضلك اختر الوقت المطلوب...",
 
+        // task20
+        "task20.title": "عرض تطبيقي",
+        "task20.generate": "توليد رقم عشوائي جديد",
+        "task20.showAll": "عرض جميع الأرقام",
 
     },
     en: {
@@ -356,6 +364,9 @@ const dict = {
         'card.task19.title': 'Event Countdown Timer',
         'card.task19.desc': 'Learn how to implement an Event countdown using JavaScript, adding some advanced effects to improve the user experience.',
 
+        // task20
+        'card.task20.title': 'Generateing App',
+        'card.task20.desc': 'Learn how to Generate a new random number using JavaScript.',
 
         'card.viewApp': 'View App',
 
@@ -537,7 +548,12 @@ const dict = {
         "task19.title": "View my application",
         "task19.placeholder": "Click the button to start the countdown",
         "task19.start": "Start the countdown",
-        "task19.please": "Please select a target date"
+        "task19.please": "Please select a target date",
+
+        // task20
+        "task20.title": "Show my application",
+        "task20.generate": "Generate a new random number",
+        "task20.showAll": "Show all numbers",
 
     },
 };
